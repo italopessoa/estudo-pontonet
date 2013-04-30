@@ -1,0 +1,5 @@
+C:\Users\italo.pessoa\Documents\Visual Studio 2008\Projects\Hotel.Smartclient\Business.Data\bin\Debug\Business.Data.dll
+C:\Users\italo.pessoa\Documents\Visual Studio 2008\Projects\Hotel.Smartclient\Business.Data\bin\Debug\Business.Data.pdb
+C:\Users\italo.pessoa\Documents\Visual Studio 2008\Projects\Hotel.Smartclient\Business.Data\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\italo.pessoa\Documents\Visual Studio 2008\Projects\Hotel.Smartclient\Business.Data\obj\Debug\Business.Data.dll
+C:\Users\italo.pessoa\Documents\Visual Studio 2008\Projects\Hotel.Smartclient\Business.Data\obj\Debug\Business.Data.pdb
