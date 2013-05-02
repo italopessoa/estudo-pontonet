@@ -12,27 +12,62 @@ namespace Hotel.Data.Implementation
 
         public void InsertQuarto(quarto novoQuarto)
         {
-            throw new NotImplementedException();
+            using (HotelEntities contexto = new HotelEntities())
+            {
+                contexto.AddToquarto(novoQuarto);
+                contexto.SaveChanges();
+            }
         }
 
         public void RemoveQuarto(quarto quarto)
         {
-            throw new NotImplementedException();
+            using (HotelEntities contexto = new HotelEntities())
+            {
+                quarto quartoAux = contexto.quarto.First(q => q.IdQuarto == quarto.IdQuarto);
+
+                contexto.DeleteObject(quartoAux);
+                contexto.SaveChanges();
+            }
         }
 
         public void UpdateQuarto(quarto quarto)
         {
-            throw new NotImplementedException();
+            using (HotelEntities contexto = new HotelEntities())
+            {
+                quarto quartoAux = contexto.quarto.First(q => q.IdQuarto == quarto.IdQuarto);
+
+                /*if (quartoeAux != null)
+                {
+                    quartoeAux.NomeCliente = cliente.NomeCliente;
+                }*/
+                contexto.SaveChanges();
+            }
         }
 
         public IList<quarto> SelectQuartos()
         {
-            throw new NotImplementedException();
+            List<quarto> quartos = new List<quarto>();
+            using (HotelEntities contexto = new HotelEntities())
+            {
+                var quartoQuery = from quarto q in contexto.quarto select q;
+
+                if (quartoQuery != null)
+                {
+                    quartos = quartoQuery.ToList<quarto>();
+                }
+            }
+
+            return quartos;
         }
 
-        public IList<quarto> SelectQuartoByTipoQuartoOrPreco(tipo_quarto tiopQuarto, double preco, bool maior)
+        public IList<quarto> SelectQuartoByTipoQuartoOrPreco(tipo_quarto tipoQuarto, double preco, bool maior)
         {
-            throw new NotImplementedException();
+            List<quarto> quartos = new List<quarto>();
+            using (HotelEntities contexto = new HotelEntities())
+            {
+            }
+
+            return quartos;
         }
 
         #endregion

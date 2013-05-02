@@ -11,6 +11,7 @@ namespace Hotel.Facade.Implementation
     public class HotelFacade : IHotelFacade
     {
         private IClienteBusiness clienteBusiness = new ClienteBusiness();
+        private IQuartoBusiness quartoBusiness = new QuartoBusiness();
 
         #region IHotelFacade Members
 
@@ -71,27 +72,27 @@ namespace Hotel.Facade.Implementation
 
         public void InsertQuarto(quarto novoQuarto)
         {
-            throw new NotImplementedException();
+            this.quartoBusiness.InsertQuarto(novoQuarto);
         }
 
         public void RemoveQuarto(quarto quarto)
         {
-            throw new NotImplementedException();
+            this.quartoBusiness.RemoveQuarto(quarto);
         }
 
         public void UpdateQuarto(quarto quarto)
         {
-            throw new NotImplementedException();
+            this.quartoBusiness.UpdateQuarto(quarto);
         }
 
         public IList<quarto> SelectQuartos()
         {
-            throw new NotImplementedException();
+            return this.quartoBusiness.SelectQuartos();
         }
 
-        public IList<quarto> SelectQuartoByTipoQuartoOrPreco(tipo_quarto tiopQuarto, double preco, bool maior)
+        public IList<quarto> SelectQuartoByTipoQuartoOrPreco(tipo_quarto tipoQuarto, double preco, bool maior)
         {
-            throw new NotImplementedException();
+            return this.quartoBusiness.SelectQuartoByTipoQuartoOrPreco(tipoQuarto, preco, maior);
         }
 
         #endregion

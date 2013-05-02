@@ -13,3 +13,27 @@ C:\Users\italo.pessoa\Documents\Visual Studio 2008\Projects\Hotel.Smartclient\Ho
 C:\Users\italo.pessoa\Documents\Visual Studio 2008\Projects\Hotel.Smartclient\Hotel.Smartclient\obj\Debug\Hotel.Smartclient.Forms.frmNovoQuarto.resources
 C:\Users\italo.pessoa\Documents\Visual Studio 2008\Projects\Hotel.Smartclient\Hotel.Smartclient\obj\Debug\Hotel.Smartclient.Forms.frmNovoTipoQuarto.resources
 C:\Users\italo.pessoa\Documents\Visual Studio 2008\Projects\Hotel.Smartclient\Hotel.Smartclient\obj\Debug\Hotel.Smartclient.Forms.frmNovaReserva.resources
+D:\Italo\CSGBD\trunk\Hotel.Smartclient\Hotel.Smartclient\bin\Debug\Hotel.Smartclient.exe.config
+D:\Italo\CSGBD\trunk\Hotel.Smartclient\Hotel.Smartclient\bin\Debug\Hotel.Smartclient.exe
+D:\Italo\CSGBD\trunk\Hotel.Smartclient\Hotel.Smartclient\bin\Debug\Hotel.Smartclient.pdb
+D:\Italo\CSGBD\trunk\Hotel.Smartclient\Hotel.Smartclient\bin\Debug\Hotel.Entity.dll
+D:\Italo\CSGBD\trunk\Hotel.Smartclient\Hotel.Smartclient\bin\Debug\Hotel.Facade.dll
+D:\Italo\CSGBD\trunk\Hotel.Smartclient\Hotel.Smartclient\bin\Debug\Hotel.Data.dll
+D:\Italo\CSGBD\trunk\Hotel.Smartclient\Hotel.Smartclient\bin\Debug\Hotel.Business.dll
+D:\Italo\CSGBD\trunk\Hotel.Smartclient\Hotel.Smartclient\bin\Debug\Hotel.Facade.pdb
+D:\Italo\CSGBD\trunk\Hotel.Smartclient\Hotel.Smartclient\bin\Debug\Hotel.Data.pdb
+D:\Italo\CSGBD\trunk\Hotel.Smartclient\Hotel.Smartclient\bin\Debug\Hotel.Entity.pdb
+D:\Italo\CSGBD\trunk\Hotel.Smartclient\Hotel.Smartclient\bin\Debug\Hotel.Business.pdb
+D:\Italo\CSGBD\trunk\Hotel.Smartclient\Hotel.Smartclient\obj\Debug\ResolveAssemblyReference.cache
+D:\Italo\CSGBD\trunk\Hotel.Smartclient\Hotel.Smartclient\obj\Debug\Hotel.Smartclient.Forms.frmConsultarHospede.resources
+D:\Italo\CSGBD\trunk\Hotel.Smartclient\Hotel.Smartclient\obj\Debug\Hotel.Smartclient.Forms.frmConsultarQuarto.resources
+D:\Italo\CSGBD\trunk\Hotel.Smartclient\Hotel.Smartclient\obj\Debug\Hotel.Smartclient.Forms.frmConsultarReserva.resources
+D:\Italo\CSGBD\trunk\Hotel.Smartclient\Hotel.Smartclient\obj\Debug\Hotel.Smartclient.Forms.frmNovaReserva.resources
+D:\Italo\CSGBD\trunk\Hotel.Smartclient\Hotel.Smartclient\obj\Debug\Hotel.Smartclient.Forms.frmNovoCliente.resources
+D:\Italo\CSGBD\trunk\Hotel.Smartclient\Hotel.Smartclient\obj\Debug\Hotel.Smartclient.Forms.frmNovoQuarto.resources
+D:\Italo\CSGBD\trunk\Hotel.Smartclient\Hotel.Smartclient\obj\Debug\Hotel.Smartclient.Forms.frmPrincipal.resources
+D:\Italo\CSGBD\trunk\Hotel.Smartclient\Hotel.Smartclient\obj\Debug\Hotel.Smartclient.Forms.frmNovoTipoQuarto.resources
+D:\Italo\CSGBD\trunk\Hotel.Smartclient\Hotel.Smartclient\obj\Debug\Hotel.Smartclient.Properties.Resources.resources
+D:\Italo\CSGBD\trunk\Hotel.Smartclient\Hotel.Smartclient\obj\Debug\Hotel.Smartclient.csproj.GenerateResource.Cache
+D:\Italo\CSGBD\trunk\Hotel.Smartclient\Hotel.Smartclient\obj\Debug\Hotel.Smartclient.exe
+D:\Italo\CSGBD\trunk\Hotel.Smartclient\Hotel.Smartclient\obj\Debug\Hotel.Smartclient.pdb
