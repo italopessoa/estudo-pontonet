@@ -44,7 +44,7 @@ namespace Hotel.Facade
 
         IList<quarto> SelectQuartos();
 
-        IList<quarto> SelectQuartoByTipoQuartoOrPreco(tipo_quarto tiopQuarto, double preco, bool maior);
+        IList<quarto> SelectQuartoByTipoQuartoOrPreco(tipo_quarto tipoQuarto, double preco, bool maior);
 
         #endregion
 
