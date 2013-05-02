@@ -35,6 +35,9 @@
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System.Data.Entity">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
@@ -54,6 +57,16 @@
     <Compile Include="IReservaBusiness.cs" />
     <Compile Include="ITipoQuartoBusiness.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Hotel.Data\Hotel.Data.csproj">
+      <Project>{DB7F379F-D00B-4971-A8EE-9EFCCA828CAF}</Project>
+      <Name>Hotel.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hotel.Entity\Hotel.Entity.csproj">
+      <Project>{BDD5307B-5048-4A14-8AF1-6AF0976C29AF}</Project>
+      <Name>Hotel.Entity</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

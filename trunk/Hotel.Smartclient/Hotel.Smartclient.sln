@@ -5,11 +5,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hotel.Smartclient", "Hotel.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hotel.Business", "Hotel.Business\Hotel.Business.csproj", "{106B62FA-A778-4D48-8BAB-47B03E3E5D89}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hotel.Data", "Business.Data\Hotel.Data.csproj", "{DB7F379F-D00B-4971-A8EE-9EFCCA828CAF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hotel.Data", "Hotel.Data\Hotel.Data.csproj", "{DB7F379F-D00B-4971-A8EE-9EFCCA828CAF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hotel.Entity", "Hotel.Entity\Hotel.Entity.csproj", "{BDD5307B-5048-4A14-8AF1-6AF0976C29AF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hotel.Facade", "Hotel.Facade\Hotel.Facade.csproj", "{1BAA31CB-70EA-4B57-9587-870358CD443E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DB7F379F-D00B-4971-A8EE-9EFCCA828CAF} = {DB7F379F-D00B-4971-A8EE-9EFCCA828CAF}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

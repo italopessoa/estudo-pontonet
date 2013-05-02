@@ -35,6 +35,9 @@
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System.Data.Entity">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
@@ -146,6 +149,10 @@
     <ProjectReference Include="..\Hotel.Entity\Hotel.Entity.csproj">
       <Project>{BDD5307B-5048-4A14-8AF1-6AF0976C29AF}</Project>
       <Name>Hotel.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hotel.Facade\Hotel.Facade.csproj">
+      <Project>{1BAA31CB-70EA-4B57-9587-870358CD443E}</Project>
+      <Name>Hotel.Facade</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
