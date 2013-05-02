@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Hotel.Entity;
 
 namespace Hotel.Smartclient.Forms
 {
@@ -14,6 +15,12 @@ namespace Hotel.Smartclient.Forms
         public frmNovoCliente()
         {
             InitializeComponent();
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            Class1 c = new Class1();
+            c.teste();
         }
     }
 }
