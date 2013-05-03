@@ -10,8 +10,27 @@ namespace Hotel.Facade.Implementation
 {
     public class HotelFacade : IHotelFacade
     {
-        private IClienteBusiness clienteBusiness = new ClienteBusiness();
-        private IQuartoBusiness quartoBusiness = new QuartoBusiness();
+
+        #region Private Members
+
+        private IClienteBusiness clienteBusiness;
+        private IQuartoBusiness quartoBusiness;
+        private ITipoQuartoBusiness tipoQuartoBusiness;
+        private IReservaBusiness reservaBusiness;
+
+        #endregion
+
+        #region Constructor
+
+        public HotelFacade()
+        {
+            this.clienteBusiness = new ClienteBusiness();
+            this.quartoBusiness = new QuartoBusiness();
+            this.tipoQuartoBusiness = new TipoQuartoBusiness();
+            this.reservaBusiness = new ReservaBusiness();
+        }
+
+        #endregion
 
         #region IHotelFacade Members
 
@@ -48,22 +67,22 @@ namespace Hotel.Facade.Implementation
 
         public void InsertTipoQuarto(tipo_quarto novoTipoQuarto)
         {
-            throw new NotImplementedException();
+            this.tipoQuartoBusiness.InsertTipoQuarto(novoTipoQuarto);
         }
 
         public void RemoveTipoQuarto(tipo_quarto tipoQuarto)
         {
-            throw new NotImplementedException();
+            this.tipoQuartoBusiness.RemoveTipoQuarto(tipoQuarto);
         }
 
         public void UpdateTipoQuarto(tipo_quarto tipoQuarto)
         {
-            throw new NotImplementedException();
+            this.tipoQuartoBusiness.UpdateTipoQuarto(tipoQuarto);
         }
 
         public IList<tipo_quarto> SelectTiposQuarto()
         {
-            throw new NotImplementedException();
+            return this.tipoQuartoBusiness.SelectTiposQuarto();
         }
 
         #endregion
@@ -101,27 +120,27 @@ namespace Hotel.Facade.Implementation
 
         public void InsertReserva(reserva novaReserva)
         {
-            throw new NotImplementedException();
+            this.reservaBusiness.InsertReserva(novaReserva);
         }
 
         public void RemoveReserva(reserva reserva)
         {
-            throw new NotImplementedException();
+            this.reservaBusiness.RemoveReserva(reserva);
         }
 
         public void UpdateReserva(reserva reserva)
         {
-            throw new NotImplementedException();
+            this.reservaBusiness.UpdateReserva(reserva);
         }
 
         public IList<reserva> SelectReservas()
         {
-            throw new NotImplementedException();
+            return this.reservaBusiness.SelectReservas();
         }
 
-        public IList<reserva> SelectReservaByClienteOrQuarto(cliente cliente, quarto uarto)
+        public IList<reserva> SelectReservaByClienteOrQuarto(cliente cliente, quarto quarto)
         {
-            throw new NotImplementedException();
+            return this.reservaBusiness.SelectReservaByClienteOrQuarto(cliente, quarto);
         }
 
         #endregion

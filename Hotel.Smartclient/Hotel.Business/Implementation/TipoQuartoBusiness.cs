@@ -3,36 +3,48 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Hotel.Entity;
+using Hotel.Data;
+using Hotel.Data.Implementation;
 
 namespace Hotel.Business.Implementation
 {
-    public class TipoQuartoBusiness : IReservaBusiness
+    public class TipoQuartoBusiness : ITipoQuartoBusiness
     {
-        #region IReservaBusiness Members
+        #region Private Members
 
-        public void InsertReserva(reserva novaReserva)
+        private ITipoQuartoData tipoQuartoData;
+
+        #endregion
+
+        #region Constructor
+
+        public TipoQuartoBusiness()
         {
-            throw new NotImplementedException();
+            this.tipoQuartoData = new TipoQuartoData();
         }
 
-        public void RemoveReserva(reserva reserva)
+        #endregion
+
+        #region ITipoQuartoBusiness Members
+
+        public void InsertTipoQuarto(tipo_quarto novoTipoQuarto)
         {
-            throw new NotImplementedException();
+            this.tipoQuartoData.InsertTipoQuarto(novoTipoQuarto);
         }
 
-        public void UpdateReserva(reserva reserva)
+        public void RemoveTipoQuarto(tipo_quarto tipoQuarto)
         {
-            throw new NotImplementedException();
+            this.tipoQuartoData.RemoveTipoQuarto(tipoQuarto);
         }
 
-        public IList<reserva> SelectReservas()
+        public void UpdateTipoQuarto(tipo_quarto tipoQuarto)
         {
-            throw new NotImplementedException();
+            this.tipoQuartoData.UpdateTipoQuarto(tipoQuarto);
         }
 
-        public IList<quarto> SelectQuartoByClienteOrQuarto(cliente cliente, quarto uarto)
+        public IList<tipo_quarto> SelectTiposQuarto()
         {
-            throw new NotImplementedException();
+            return this.tipoQuartoData.SelectTiposQuarto();
         }
 
         #endregion

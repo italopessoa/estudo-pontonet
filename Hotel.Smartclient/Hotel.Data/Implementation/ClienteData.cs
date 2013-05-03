@@ -14,6 +14,7 @@ namespace Hotel.Data.Implementation
         {
             using (HotelEntities contexto = new HotelEntities())
             {
+                novoCliente.DtCadastro = DateTime.Now;
                 contexto.AddTocliente(novoCliente);
                 contexto.SaveChanges();
             }

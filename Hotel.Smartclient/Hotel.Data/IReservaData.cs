@@ -16,6 +16,6 @@ namespace Hotel.Data
 
         IList<reserva> SelectReservas();
 
-        IList<quarto> SelectQuartoByClienteOrQuarto(cliente cliente, quarto uarto);
+        IList<reserva> SelectReservaByClienteOrQuarto(cliente cliente, quarto quarto);
     }
 }

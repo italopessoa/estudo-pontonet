@@ -65,6 +65,53 @@ namespace Hotel.Data.Implementation
             List<quarto> quartos = new List<quarto>();
             using (HotelEntities contexto = new HotelEntities())
             {
+                IQueryable<quarto> quartosQuery = null;
+                if (tipoQuarto != null && preco > 0)
+                {
+                    if (maior)
+                    {
+                        quartosQuery = from quarto q in contexto.quarto
+                                       where q.tipo_quarto.IdTipoQuarto == tipoQuarto.IdTipoQuarto
+                                       && q.PrecoQuarto >= preco
+                                       select q;
+                    }
+                    else
+                    {
+                        quartosQuery = from quarto q in contexto.quarto
+                                       where q.tipo_quarto.IdTipoQuarto == tipoQuarto.IdTipoQuarto
+                                       && q.PrecoQuarto <= preco
+                                       select q;
+                    }
+                }
+
+                if (tipoQuarto != null && preco == 0)
+                {
+                    quartosQuery = from quarto q in contexto.quarto
+                                   where q.tipo_quarto.IdTipoQuarto == tipoQuarto.IdTipoQuarto
+                                   select q;
+                }
+
+                if (tipoQuarto == null && preco > 0)
+                {
+                    if (maior)
+                    {
+                        quartosQuery = from quarto q in contexto.quarto
+                                       where q.PrecoQuarto >= preco select q;
+                    }
+                    else
+                    {
+                        quartosQuery = from quarto q in contexto.quarto
+                                       where q.PrecoQuarto <= preco select q;
+                    }
+                }
+
+                if (tipoQuarto == null && preco == 0)
+                {
+                    quartosQuery = from quarto q in contexto.quarto select q;
+                }
+
+                if (quartosQuery != null)
+                    quartos = quartosQuery.ToList<quarto>();
             }
 
             return quartos;
