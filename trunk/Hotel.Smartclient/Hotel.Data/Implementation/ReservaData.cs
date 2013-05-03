@@ -12,27 +12,81 @@ namespace Hotel.Data.Implementation
 
         public void InsertReserva(reserva novaReserva)
         {
-            throw new NotImplementedException();
+            using (HotelEntities contexto = new HotelEntities())
+            {
+                contexto.AddToreserva(novaReserva);
+                contexto.SaveChanges();
+            }
         }
 
         public void RemoveReserva(reserva reserva)
         {
-            throw new NotImplementedException();
+            using (HotelEntities contexto = new HotelEntities())
+            {
+                contexto.DeleteObject(reserva);
+                contexto.SaveChanges();
+            }
         }
 
         public void UpdateReserva(reserva reserva)
         {
-            throw new NotImplementedException();
+            using (HotelEntities contexto = new HotelEntities())
+            {
+                reserva reservaAux = contexto.reserva.First(r => r.IdReserva == reserva.IdReserva);
+
+                contexto.DeleteObject(reservaAux);
+                contexto.SaveChanges();
+            }
         }
 
         public IList<reserva> SelectReservas()
         {
-            throw new NotImplementedException();
+            IList<reserva> reservas = new List<reserva>();
+            using (HotelEntities contexto = new HotelEntities())
+            {
+                var reservasQuery = from reserva r in contexto.reserva select r;
+
+                if (reservasQuery != null)
+                {
+                    reservas = reservasQuery.ToList<reserva>();
+                }
+            }
+
+            return reservas;
         }
 
-        public IList<quarto> SelectQuartoByClienteOrQuarto(cliente cliente, quarto uarto)
+        public IList<reserva> SelectReservaByClienteOrQuarto(cliente cliente, quarto quarto)
         {
-            throw new NotImplementedException();
+            IList<reserva> reservas = new List<reserva>();
+
+            using (HotelEntities contexto = new HotelEntities())
+            {
+                if (cliente != null && quarto == null)
+                {
+                    var reservasQuery = from reserva r in contexto.reserva 
+                                        where r.cliente.IdCliente == cliente.IdCliente select r;
+                } 
+                else if (cliente == null && quarto != null)
+                {
+                    var reservasQuery = from reserva r in contexto.reserva 
+                                        where r.quarto.IdQuarto == quarto.IdQuarto select r;
+                }
+                else if (cliente != null && quarto != null)
+                {
+                    var reservasQuery = from reserva r in contexto.reserva
+                                        where r.quarto.IdQuarto == quarto.IdQuarto
+                                        && r.cliente.IdCliente == cliente.IdCliente
+                                        select r;
+                }
+                else
+                {
+                    var reservasQuery = from reserva r in contexto.reserva select r;
+                }
+            }
+
+            
+
+            return reservas;
         }
 
         #endregion

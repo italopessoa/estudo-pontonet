@@ -12,6 +12,12 @@ namespace Hotel.Business.Implementation
     {
         private IClienteData clienteData = new ClienteData();
 
+        #region Private Members
+        #endregion
+
+        #region Constructor
+        #endregion
+
         #region IClienteBusiness Members
 
         public void InsertCliente(cliente novoCliente)

@@ -3,36 +3,53 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Hotel.Entity;
+using Hotel.Data;
+using Hotel.Data.Implementation;
 
 namespace Hotel.Business.Implementation
 {
     public class ReservaBusiness : IReservaBusiness
     {
+        #region Private Members
+
+        private IReservaData reservaData;
+
+        #endregion
+
+        #region Constructor
+
+        public ReservaBusiness()
+        {
+            this.reservaData = new ReservaData();
+        }
+
+        #endregion
+
         #region IReservaBusiness Members
 
         public void InsertReserva(reserva novaReserva)
         {
-            throw new NotImplementedException();
+            this.reservaData.InsertReserva(novaReserva);
         }
 
         public void RemoveReserva(reserva reserva)
         {
-            throw new NotImplementedException();
+            this.reservaData.RemoveReserva(reserva);
         }
 
         public void UpdateReserva(reserva reserva)
         {
-            throw new NotImplementedException();
+            this.reservaData.UpdateReserva(reserva);
         }
 
         public IList<reserva> SelectReservas()
         {
-            throw new NotImplementedException();
+            return this.reservaData.SelectReservas();
         }
 
-        public IList<quarto> SelectQuartoByClienteOrQuarto(cliente cliente, quarto uarto)
+        public IList<reserva> SelectReservaByClienteOrQuarto(cliente cliente, quarto quarto)
         {
-            throw new NotImplementedException();
+            return this.reservaData.SelectReservaByClienteOrQuarto(cliente, quarto);
         }
 
         #endregion

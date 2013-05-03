@@ -58,7 +58,7 @@ namespace Hotel.Facade
 
         IList<reserva> SelectReservas();
 
-        IList<reserva> SelectReservaByClienteOrQuarto(cliente cliente, quarto uarto);
+        IList<reserva> SelectReservaByClienteOrQuarto(cliente cliente, quarto quarto);
 
         #endregion
     }

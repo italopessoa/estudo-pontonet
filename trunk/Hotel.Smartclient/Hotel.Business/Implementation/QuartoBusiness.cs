@@ -10,7 +10,20 @@ namespace Hotel.Business.Implementation
 {
     public class QuartoBusiness : IQuartoBusiness
     {
-        private IQuartoData quartoData = new QuartoData();
+        #region Private Members
+
+        private IQuartoData quartoData;
+
+        #endregion
+
+        #region Constructor
+
+        public QuartoBusiness()
+        {
+            this.quartoData = new QuartoData();
+        }
+
+        #endregion
 
         #region IQuartoBusiness Members
 

@@ -10,24 +10,53 @@ namespace Hotel.Data.Implementation
     {
         #region ITipoQuartoData Members
 
-        public void InsertTipoQuarto(Hotel.Entity.tipo_quarto novoTipoQuarto)
+        public void InsertTipoQuarto(tipo_quarto novoTipoQuarto)
         {
-            throw new NotImplementedException();
+            using (HotelEntities contexto = new HotelEntities())
+            {
+                novoTipoQuarto.DtCadastro = DateTime.Now;
+                contexto.AddTotipo_quarto(novoTipoQuarto);
+                contexto.SaveChanges();
+            }
         }
 
-        public void RemoveTipoQuarto(Hotel.Entity.tipo_quarto tipoQuarto)
+        public void RemoveTipoQuarto(tipo_quarto tipoQuarto)
         {
-            throw new NotImplementedException();
+            using (HotelEntities contexto = new HotelEntities())
+            {
+                contexto.DeleteObject(tipoQuarto);
+                contexto.SaveChanges();
+            }
         }
 
-        public void UpdateTipoQuarto(Hotel.Entity.tipo_quarto tipoQuarto)
+        public void UpdateTipoQuarto(tipo_quarto tipoQuarto)
         {
-            throw new NotImplementedException();
+            using (HotelEntities contexto = new HotelEntities())
+            {
+                tipo_quarto tipoQuartoAux = contexto.tipo_quarto.First(tq => tq.IdTipoQuarto == tipoQuarto.IdTipoQuarto);
+
+                if (tipoQuartoAux != null)
+                {
+                    tipoQuartoAux.NomeTipoQuarto = tipoQuarto.NomeTipoQuarto;
+                }
+                contexto.SaveChanges();
+            }
         }
 
-        public IList<Hotel.Entity.tipo_quarto> SelectTiposQuarto()
+        public IList<tipo_quarto> SelectTiposQuarto()
         {
-            throw new NotImplementedException();
+            List<tipo_quarto> tiposQuarto = new List<tipo_quarto>();
+            using (HotelEntities contexto = new HotelEntities())
+            {
+                var tiposQuartoQuery = from tipo_quarto tq in contexto.tipo_quarto select tq;
+
+                if (tiposQuartoQuery != null)
+                {
+                    tiposQuarto = tiposQuartoQuery.ToList<tipo_quarto>();
+                }
+            }
+
+            return tiposQuarto;
         }
 
         #endregion
