@@ -14,3 +14,14 @@ D:\Italo\CSGBD\trunk\Hotel.Smartclient\Hotel.Facade\bin\Debug\Hotel.Business.pdb
 D:\Italo\CSGBD\trunk\Hotel.Smartclient\Hotel.Facade\obj\Debug\ResolveAssemblyReference.cache
 D:\Italo\CSGBD\trunk\Hotel.Smartclient\Hotel.Facade\obj\Debug\Hotel.Facade.dll
 D:\Italo\CSGBD\trunk\Hotel.Smartclient\Hotel.Facade\obj\Debug\Hotel.Facade.pdb
+F:\estudo-pontonet\Hotel.Smartclient\Hotel.Facade\bin\Debug\Hotel.Facade.dll
+F:\estudo-pontonet\Hotel.Smartclient\Hotel.Facade\bin\Debug\Hotel.Facade.pdb
+F:\estudo-pontonet\Hotel.Smartclient\Hotel.Facade\bin\Debug\Hotel.Business.dll
+F:\estudo-pontonet\Hotel.Smartclient\Hotel.Facade\bin\Debug\Hotel.Entity.dll
+F:\estudo-pontonet\Hotel.Smartclient\Hotel.Facade\bin\Debug\Hotel.Data.dll
+F:\estudo-pontonet\Hotel.Smartclient\Hotel.Facade\bin\Debug\Hotel.Data.pdb
+F:\estudo-pontonet\Hotel.Smartclient\Hotel.Facade\bin\Debug\Hotel.Entity.pdb
+F:\estudo-pontonet\Hotel.Smartclient\Hotel.Facade\bin\Debug\Hotel.Business.pdb
+F:\estudo-pontonet\Hotel.Smartclient\Hotel.Facade\obj\Debug\ResolveAssemblyReference.cache
+F:\estudo-pontonet\Hotel.Smartclient\Hotel.Facade\obj\Debug\Hotel.Facade.dll
+F:\estudo-pontonet\Hotel.Smartclient\Hotel.Facade\obj\Debug\Hotel.Facade.pdb

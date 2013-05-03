@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblValor = new System.Windows.Forms.Label();
-            this.txtDiaria = new System.Windows.Forms.TextBox();
-            this.lblTipoQuarto = new System.Windows.Forms.Label();
-            this.cmbTipoQuarto = new System.Windows.Forms.ComboBox();
             this.btnSalvar = new System.Windows.Forms.Button();
+            this.cmbTipoQuarto = new System.Windows.Forms.ComboBox();
+            this.lblTipoQuarto = new System.Windows.Forms.Label();
+            this.txtDiaria = new System.Windows.Forms.TextBox();
+            this.lblValor = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,21 +51,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados do quarto";
             // 
-            // lblValor
+            // btnSalvar
             // 
-            this.lblValor.AutoSize = true;
-            this.lblValor.Location = new System.Drawing.Point(7, 20);
-            this.lblValor.Name = "lblValor";
-            this.lblValor.Size = new System.Drawing.Size(37, 13);
-            this.lblValor.TabIndex = 0;
-            this.lblValor.Text = "Diária:";
+            this.btnSalvar.Location = new System.Drawing.Point(140, 58);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(75, 23);
+            this.btnSalvar.TabIndex = 4;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
-            // txtDiaria
+            // cmbTipoQuarto
             // 
-            this.txtDiaria.Location = new System.Drawing.Point(51, 20);
-            this.txtDiaria.Name = "txtDiaria";
-            this.txtDiaria.Size = new System.Drawing.Size(78, 20);
-            this.txtDiaria.TabIndex = 1;
+            this.cmbTipoQuarto.FormattingEnabled = true;
+            this.cmbTipoQuarto.Location = new System.Drawing.Point(232, 19);
+            this.cmbTipoQuarto.Name = "cmbTipoQuarto";
+            this.cmbTipoQuarto.Size = new System.Drawing.Size(121, 21);
+            this.cmbTipoQuarto.TabIndex = 3;
             // 
             // lblTipoQuarto
             // 
@@ -76,22 +78,21 @@
             this.lblTipoQuarto.TabIndex = 2;
             this.lblTipoQuarto.Text = "Tipo de quarto:";
             // 
-            // cmbTipoQuarto
+            // txtDiaria
             // 
-            this.cmbTipoQuarto.FormattingEnabled = true;
-            this.cmbTipoQuarto.Location = new System.Drawing.Point(232, 19);
-            this.cmbTipoQuarto.Name = "cmbTipoQuarto";
-            this.cmbTipoQuarto.Size = new System.Drawing.Size(121, 21);
-            this.cmbTipoQuarto.TabIndex = 3;
+            this.txtDiaria.Location = new System.Drawing.Point(51, 20);
+            this.txtDiaria.Name = "txtDiaria";
+            this.txtDiaria.Size = new System.Drawing.Size(78, 20);
+            this.txtDiaria.TabIndex = 1;
             // 
-            // btnSalvar
+            // lblValor
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(140, 58);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(75, 23);
-            this.btnSalvar.TabIndex = 4;
-            this.btnSalvar.Text = "Salvar";
-            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.lblValor.AutoSize = true;
+            this.lblValor.Location = new System.Drawing.Point(7, 20);
+            this.lblValor.Name = "lblValor";
+            this.lblValor.Size = new System.Drawing.Size(37, 13);
+            this.lblValor.TabIndex = 0;
+            this.lblValor.Text = "Diária:";
             // 
             // frmNovoQuarto
             // 

@@ -15,5 +15,7 @@ namespace Hotel.Data
         void UpdateTipoQuarto(tipo_quarto tipoQuarto);
 
         IList<tipo_quarto> SelectTiposQuarto();
+
+        tipo_quarto SelectTipoQuartoById(int idTipoQuarto);
     }
 }

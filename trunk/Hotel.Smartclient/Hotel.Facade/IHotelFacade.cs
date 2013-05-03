@@ -32,6 +32,8 @@ namespace Hotel.Facade
 
         IList<tipo_quarto> SelectTiposQuarto();
 
+        tipo_quarto SelectTipoQuartoById(int idTipoQuarto);
+
         #endregion
 
         #region Quarto
