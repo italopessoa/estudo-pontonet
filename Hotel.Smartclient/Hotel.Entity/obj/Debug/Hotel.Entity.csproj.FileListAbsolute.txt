@@ -9,3 +9,9 @@ D:\Italo\CSGBD\trunk\Hotel.Smartclient\Hotel.Entity\bin\Debug\Hotel.Entity.pdb
 D:\Italo\CSGBD\trunk\Hotel.Smartclient\Hotel.Entity\obj\Debug\ResolveAssemblyReference.cache
 D:\Italo\CSGBD\trunk\Hotel.Smartclient\Hotel.Entity\obj\Debug\Hotel.Entity.dll
 D:\Italo\CSGBD\trunk\Hotel.Smartclient\Hotel.Entity\obj\Debug\Hotel.Entity.pdb
+F:\estudo-pontonet\Hotel.Smartclient\Hotel.Entity\bin\Debug\Hotel.Entity.dll.config
+F:\estudo-pontonet\Hotel.Smartclient\Hotel.Entity\bin\Debug\Hotel.Entity.dll
+F:\estudo-pontonet\Hotel.Smartclient\Hotel.Entity\bin\Debug\Hotel.Entity.pdb
+F:\estudo-pontonet\Hotel.Smartclient\Hotel.Entity\obj\Debug\ResolveAssemblyReference.cache
+F:\estudo-pontonet\Hotel.Smartclient\Hotel.Entity\obj\Debug\Hotel.Entity.dll
+F:\estudo-pontonet\Hotel.Smartclient\Hotel.Entity\obj\Debug\Hotel.Entity.pdb

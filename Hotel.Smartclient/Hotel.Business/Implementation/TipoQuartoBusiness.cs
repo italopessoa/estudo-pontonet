@@ -47,6 +47,11 @@ namespace Hotel.Business.Implementation
             return this.tipoQuartoData.SelectTiposQuarto();
         }
 
+        public tipo_quarto SelectTipoQuartoById(int idTipoQuarto)
+        {
+            return this.tipoQuartoData.SelectTipoQuartoById(idTipoQuarto);
+        }
+
         #endregion
     }
 }

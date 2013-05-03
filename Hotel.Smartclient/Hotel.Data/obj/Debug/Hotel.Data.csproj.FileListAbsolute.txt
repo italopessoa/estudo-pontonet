@@ -17,3 +17,10 @@ D:\Italo\CSGBD\trunk\Hotel.Smartclient\Hotel.Data\bin\Debug\Hotel.Entity.pdb
 D:\Italo\CSGBD\trunk\Hotel.Smartclient\Hotel.Data\obj\Debug\ResolveAssemblyReference.cache
 D:\Italo\CSGBD\trunk\Hotel.Smartclient\Hotel.Data\obj\Debug\Hotel.Data.dll
 D:\Italo\CSGBD\trunk\Hotel.Smartclient\Hotel.Data\obj\Debug\Hotel.Data.pdb
+F:\estudo-pontonet\Hotel.Smartclient\Hotel.Data\bin\Debug\Hotel.Data.dll
+F:\estudo-pontonet\Hotel.Smartclient\Hotel.Data\bin\Debug\Hotel.Data.pdb
+F:\estudo-pontonet\Hotel.Smartclient\Hotel.Data\bin\Debug\Hotel.Entity.dll
+F:\estudo-pontonet\Hotel.Smartclient\Hotel.Data\bin\Debug\Hotel.Entity.pdb
+F:\estudo-pontonet\Hotel.Smartclient\Hotel.Data\obj\Debug\ResolveAssemblyReference.cache
+F:\estudo-pontonet\Hotel.Smartclient\Hotel.Data\obj\Debug\Hotel.Data.dll
+F:\estudo-pontonet\Hotel.Smartclient\Hotel.Data\obj\Debug\Hotel.Data.pdb

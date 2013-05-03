@@ -59,6 +59,23 @@ namespace Hotel.Data.Implementation
             return tiposQuarto;
         }
 
+        public tipo_quarto SelectTipoQuartoById(int idTipoQuarto)
+        {
+            using (HotelEntities contexto = new HotelEntities())
+            {
+                var tipoQuartoQuery = from tipo_quarto tq in contexto.tipo_quarto
+                                      where tq.IdTipoQuarto == idTipoQuarto
+                                      select tq;
+
+                tipo_quarto tipoQuarto = null;
+                if (tipoQuartoQuery != null)
+                {
+                     tipoQuarto = tipoQuartoQuery.First<tipo_quarto>();
+                }
+
+                return tipoQuarto;
+            }
+        }
         #endregion
     }
 }

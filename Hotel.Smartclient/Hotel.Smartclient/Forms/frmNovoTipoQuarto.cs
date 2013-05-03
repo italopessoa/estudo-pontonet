@@ -24,9 +24,33 @@ namespace Hotel.Smartclient.Forms
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            tipo_quarto tipoQuarto = new tipo_quarto();
-            tipoQuarto.NomeTipoQuarto = txtNome.Text;
-            this.hotelFacade.InsertTipoQuarto(tipoQuarto);
+            string msg = this.validarCamposTipoQuarto();
+            if (String.IsNullOrEmpty(msg))
+            {
+                tipo_quarto tipoQuarto = new tipo_quarto();
+                tipoQuarto.NomeTipoQuarto = txtNome.Text;
+                try
+                {
+                    this.hotelFacade.InsertTipoQuarto(tipoQuarto);
+                    MessageBox.Show("Cliente cadastado com sucesso!", "Operação completada.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao cadastrar Tipo de Quarto.","Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }else
+                MessageBox.Show(msg, "Erro ao cadastrar Tipo de Quarto.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private string validarCamposTipoQuarto()
+        {
+            StringBuilder msg = new StringBuilder();
+            if (String.IsNullOrEmpty(this.txtNome.Text))
+            {
+                msg.Append("Informe o nome do Tipo de Quarto.");
+            }
+
+            return msg.ToString();
         }
     }
 }
