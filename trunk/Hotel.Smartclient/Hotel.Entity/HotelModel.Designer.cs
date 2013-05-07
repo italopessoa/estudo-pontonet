@@ -14,7 +14,7 @@
 [assembly: global::System.Data.Objects.DataClasses.EdmRelationshipAttribute("HotelModel", "tiop_quarto_fk", "tipo_quarto", global::System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Hotel.Entity.tipo_quarto), "quarto", global::System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Hotel.Entity.quarto))]
 
 // Original file name:
-// Generation date: 02/05/2013 14:51:17
+// Generation date: 07/05/2013 15:34:59
 namespace Hotel.Entity
 {
     

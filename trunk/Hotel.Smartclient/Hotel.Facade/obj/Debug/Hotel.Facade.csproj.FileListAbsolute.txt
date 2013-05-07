@@ -3,17 +3,6 @@ C:\Users\italo.pessoa\Documents\Visual Studio 2008\Projects\Hotel.Smartclient\Ho
 C:\Users\italo.pessoa\Documents\Visual Studio 2008\Projects\Hotel.Smartclient\Hotel.Facade\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\italo.pessoa\Documents\Visual Studio 2008\Projects\Hotel.Smartclient\Hotel.Facade\obj\Debug\Hotel.Facade.dll
 C:\Users\italo.pessoa\Documents\Visual Studio 2008\Projects\Hotel.Smartclient\Hotel.Facade\obj\Debug\Hotel.Facade.pdb
-D:\Italo\CSGBD\trunk\Hotel.Smartclient\Hotel.Facade\bin\Debug\Hotel.Facade.dll
-D:\Italo\CSGBD\trunk\Hotel.Smartclient\Hotel.Facade\bin\Debug\Hotel.Facade.pdb
-D:\Italo\CSGBD\trunk\Hotel.Smartclient\Hotel.Facade\bin\Debug\Hotel.Business.dll
-D:\Italo\CSGBD\trunk\Hotel.Smartclient\Hotel.Facade\bin\Debug\Hotel.Entity.dll
-D:\Italo\CSGBD\trunk\Hotel.Smartclient\Hotel.Facade\bin\Debug\Hotel.Data.dll
-D:\Italo\CSGBD\trunk\Hotel.Smartclient\Hotel.Facade\bin\Debug\Hotel.Data.pdb
-D:\Italo\CSGBD\trunk\Hotel.Smartclient\Hotel.Facade\bin\Debug\Hotel.Entity.pdb
-D:\Italo\CSGBD\trunk\Hotel.Smartclient\Hotel.Facade\bin\Debug\Hotel.Business.pdb
-D:\Italo\CSGBD\trunk\Hotel.Smartclient\Hotel.Facade\obj\Debug\ResolveAssemblyReference.cache
-D:\Italo\CSGBD\trunk\Hotel.Smartclient\Hotel.Facade\obj\Debug\Hotel.Facade.dll
-D:\Italo\CSGBD\trunk\Hotel.Smartclient\Hotel.Facade\obj\Debug\Hotel.Facade.pdb
 F:\estudo-pontonet\Hotel.Smartclient\Hotel.Facade\bin\Debug\Hotel.Facade.dll
 F:\estudo-pontonet\Hotel.Smartclient\Hotel.Facade\bin\Debug\Hotel.Facade.pdb
 F:\estudo-pontonet\Hotel.Smartclient\Hotel.Facade\bin\Debug\Hotel.Business.dll
@@ -25,3 +14,14 @@ F:\estudo-pontonet\Hotel.Smartclient\Hotel.Facade\bin\Debug\Hotel.Business.pdb
 F:\estudo-pontonet\Hotel.Smartclient\Hotel.Facade\obj\Debug\ResolveAssemblyReference.cache
 F:\estudo-pontonet\Hotel.Smartclient\Hotel.Facade\obj\Debug\Hotel.Facade.dll
 F:\estudo-pontonet\Hotel.Smartclient\Hotel.Facade\obj\Debug\Hotel.Facade.pdb
+D:\Italo\CSGBD\trunk\Hotel.Smartclient\Hotel.Facade\bin\Debug\Hotel.Facade.dll
+D:\Italo\CSGBD\trunk\Hotel.Smartclient\Hotel.Facade\bin\Debug\Hotel.Facade.pdb
+D:\Italo\CSGBD\trunk\Hotel.Smartclient\Hotel.Facade\bin\Debug\Hotel.Business.dll
+D:\Italo\CSGBD\trunk\Hotel.Smartclient\Hotel.Facade\bin\Debug\Hotel.Entity.dll
+D:\Italo\CSGBD\trunk\Hotel.Smartclient\Hotel.Facade\bin\Debug\Hotel.Data.dll
+D:\Italo\CSGBD\trunk\Hotel.Smartclient\Hotel.Facade\bin\Debug\Hotel.Data.pdb
+D:\Italo\CSGBD\trunk\Hotel.Smartclient\Hotel.Facade\bin\Debug\Hotel.Entity.pdb
+D:\Italo\CSGBD\trunk\Hotel.Smartclient\Hotel.Facade\bin\Debug\Hotel.Business.pdb
+D:\Italo\CSGBD\trunk\Hotel.Smartclient\Hotel.Facade\obj\Debug\ResolveAssemblyReference.cache
+D:\Italo\CSGBD\trunk\Hotel.Smartclient\Hotel.Facade\obj\Debug\Hotel.Facade.dll
+D:\Italo\CSGBD\trunk\Hotel.Smartclient\Hotel.Facade\obj\Debug\Hotel.Facade.pdb
