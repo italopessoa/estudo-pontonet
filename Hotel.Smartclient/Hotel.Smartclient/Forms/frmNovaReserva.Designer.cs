@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblCliente = new System.Windows.Forms.Label();
-            this.txtCliente = new System.Windows.Forms.TextBox();
-            this.btnBuscarCliente = new System.Windows.Forms.Button();
+            this.btnReservar = new System.Windows.Forms.Button();
+            this.dtpSaida = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dtpEntrada = new System.Windows.Forms.DateTimePicker();
+            this.lblDtEntrada = new System.Windows.Forms.Label();
             this.btnBuscarQuarto = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblQuarto = new System.Windows.Forms.Label();
-            this.lblDtEntrada = new System.Windows.Forms.Label();
-            this.dtpEntrada = new System.Windows.Forms.DateTimePicker();
-            this.dtpSaida = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
+            this.btnBuscarCliente = new System.Windows.Forms.Button();
+            this.txtCliente = new System.Windows.Forms.TextBox();
+            this.lblCliente = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnReservar = new System.Windows.Forms.Button();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Quarto = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,80 +66,20 @@
             this.groupBox1.Controls.Add(this.lblCliente);
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(510, 158);
+            this.groupBox1.Size = new System.Drawing.Size(557, 158);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados da reserva";
             // 
-            // lblCliente
+            // btnReservar
             // 
-            this.lblCliente.AutoSize = true;
-            this.lblCliente.Location = new System.Drawing.Point(7, 30);
-            this.lblCliente.Name = "lblCliente";
-            this.lblCliente.Size = new System.Drawing.Size(53, 13);
-            this.lblCliente.TabIndex = 0;
-            this.lblCliente.Text = "Hóspede:";
-            // 
-            // txtCliente
-            // 
-            this.txtCliente.Enabled = false;
-            this.txtCliente.Location = new System.Drawing.Point(63, 27);
-            this.txtCliente.Name = "txtCliente";
-            this.txtCliente.Size = new System.Drawing.Size(166, 20);
-            this.txtCliente.TabIndex = 1;
-            // 
-            // btnBuscarCliente
-            // 
-            this.btnBuscarCliente.Location = new System.Drawing.Point(245, 25);
-            this.btnBuscarCliente.Name = "btnBuscarCliente";
-            this.btnBuscarCliente.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscarCliente.TabIndex = 2;
-            this.btnBuscarCliente.Text = "Buscar";
-            this.btnBuscarCliente.UseVisualStyleBackColor = true;
-            this.btnBuscarCliente.Click += new System.EventHandler(this.btnBuscarCliente_Click);
-            // 
-            // btnBuscarQuarto
-            // 
-            this.btnBuscarQuarto.Location = new System.Drawing.Point(245, 54);
-            this.btnBuscarQuarto.Name = "btnBuscarQuarto";
-            this.btnBuscarQuarto.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscarQuarto.TabIndex = 5;
-            this.btnBuscarQuarto.Text = "Buscar";
-            this.btnBuscarQuarto.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(63, 56);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(166, 20);
-            this.textBox1.TabIndex = 4;
-            // 
-            // lblQuarto
-            // 
-            this.lblQuarto.AutoSize = true;
-            this.lblQuarto.Location = new System.Drawing.Point(7, 59);
-            this.lblQuarto.Name = "lblQuarto";
-            this.lblQuarto.Size = new System.Drawing.Size(42, 13);
-            this.lblQuarto.TabIndex = 3;
-            this.lblQuarto.Text = "Quarto:";
-            // 
-            // lblDtEntrada
-            // 
-            this.lblDtEntrada.AutoSize = true;
-            this.lblDtEntrada.Location = new System.Drawing.Point(7, 93);
-            this.lblDtEntrada.Name = "lblDtEntrada";
-            this.lblDtEntrada.Size = new System.Drawing.Size(21, 13);
-            this.lblDtEntrada.TabIndex = 6;
-            this.lblDtEntrada.Text = "De";
-            // 
-            // dtpEntrada
-            // 
-            this.dtpEntrada.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpEntrada.Location = new System.Drawing.Point(34, 91);
-            this.dtpEntrada.Name = "dtpEntrada";
-            this.dtpEntrada.Size = new System.Drawing.Size(107, 20);
-            this.dtpEntrada.TabIndex = 7;
+            this.btnReservar.Location = new System.Drawing.Point(245, 129);
+            this.btnReservar.Name = "btnReservar";
+            this.btnReservar.Size = new System.Drawing.Size(75, 23);
+            this.btnReservar.TabIndex = 10;
+            this.btnReservar.Text = "Reservar";
+            this.btnReservar.UseVisualStyleBackColor = true;
+            this.btnReservar.Click += new System.EventHandler(this.btnReservar_Click);
             // 
             // dtpSaida
             // 
@@ -158,8 +98,81 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "à";
             // 
+            // dtpEntrada
+            // 
+            this.dtpEntrada.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpEntrada.Location = new System.Drawing.Point(34, 91);
+            this.dtpEntrada.Name = "dtpEntrada";
+            this.dtpEntrada.Size = new System.Drawing.Size(107, 20);
+            this.dtpEntrada.TabIndex = 7;
+            // 
+            // lblDtEntrada
+            // 
+            this.lblDtEntrada.AutoSize = true;
+            this.lblDtEntrada.Location = new System.Drawing.Point(7, 93);
+            this.lblDtEntrada.Name = "lblDtEntrada";
+            this.lblDtEntrada.Size = new System.Drawing.Size(21, 13);
+            this.lblDtEntrada.TabIndex = 6;
+            this.lblDtEntrada.Text = "De";
+            // 
+            // btnBuscarQuarto
+            // 
+            this.btnBuscarQuarto.Location = new System.Drawing.Point(245, 54);
+            this.btnBuscarQuarto.Name = "btnBuscarQuarto";
+            this.btnBuscarQuarto.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscarQuarto.TabIndex = 5;
+            this.btnBuscarQuarto.Text = "Buscar";
+            this.btnBuscarQuarto.UseVisualStyleBackColor = true;
+            this.btnBuscarQuarto.Click += new System.EventHandler(this.btnBuscarQuarto_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Enabled = false;
+            this.textBox1.Location = new System.Drawing.Point(63, 56);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(166, 20);
+            this.textBox1.TabIndex = 4;
+            // 
+            // lblQuarto
+            // 
+            this.lblQuarto.AutoSize = true;
+            this.lblQuarto.Location = new System.Drawing.Point(7, 59);
+            this.lblQuarto.Name = "lblQuarto";
+            this.lblQuarto.Size = new System.Drawing.Size(42, 13);
+            this.lblQuarto.TabIndex = 3;
+            this.lblQuarto.Text = "Quarto:";
+            // 
+            // btnBuscarCliente
+            // 
+            this.btnBuscarCliente.Location = new System.Drawing.Point(245, 25);
+            this.btnBuscarCliente.Name = "btnBuscarCliente";
+            this.btnBuscarCliente.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscarCliente.TabIndex = 2;
+            this.btnBuscarCliente.Text = "Buscar";
+            this.btnBuscarCliente.UseVisualStyleBackColor = true;
+            this.btnBuscarCliente.Click += new System.EventHandler(this.btnBuscarCliente_Click);
+            // 
+            // txtCliente
+            // 
+            this.txtCliente.Enabled = false;
+            this.txtCliente.Location = new System.Drawing.Point(63, 27);
+            this.txtCliente.Name = "txtCliente";
+            this.txtCliente.Size = new System.Drawing.Size(166, 20);
+            this.txtCliente.TabIndex = 1;
+            // 
+            // lblCliente
+            // 
+            this.lblCliente.AutoSize = true;
+            this.lblCliente.Location = new System.Drawing.Point(7, 30);
+            this.lblCliente.Name = "lblCliente";
+            this.lblCliente.Size = new System.Drawing.Size(53, 13);
+            this.lblCliente.TabIndex = 0;
+            this.lblCliente.Text = "Hóspede:";
+            // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -170,58 +183,60 @@
             this.DtCadastro});
             this.dataGridView1.Location = new System.Drawing.Point(12, 193);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(510, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(558, 150);
             this.dataGridView1.TabIndex = 1;
-            // 
-            // btnReservar
-            // 
-            this.btnReservar.Location = new System.Drawing.Point(184, 126);
-            this.btnReservar.Name = "btnReservar";
-            this.btnReservar.Size = new System.Drawing.Size(75, 23);
-            this.btnReservar.TabIndex = 10;
-            this.btnReservar.Text = "Reservar";
-            this.btnReservar.UseVisualStyleBackColor = true;
             // 
             // ID
             // 
+            this.ID.DataPropertyName = "IdReserva";
             this.ID.HeaderText = "ID";
             this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
             this.ID.Width = 45;
             // 
             // Cliente
             // 
             this.Cliente.HeaderText = "Hóspede";
             this.Cliente.Name = "Cliente";
+            this.Cliente.ReadOnly = true;
             // 
             // Quarto
             // 
             this.Quarto.HeaderText = "Quarto";
             this.Quarto.Name = "Quarto";
+            this.Quarto.ReadOnly = true;
             this.Quarto.Width = 70;
             // 
             // DtEntrada
             // 
+            this.DtEntrada.DataPropertyName = "DtEntrada";
             this.DtEntrada.HeaderText = "Data de entrada";
             this.DtEntrada.Name = "DtEntrada";
+            this.DtEntrada.ReadOnly = true;
             this.DtEntrada.Width = 120;
             // 
             // DtSaida
             // 
+            this.DtSaida.DataPropertyName = "DtSaida";
             this.DtSaida.HeaderText = "Data de saída";
             this.DtSaida.Name = "DtSaida";
+            this.DtSaida.ReadOnly = true;
             // 
             // DtCadastro
             // 
+            this.DtCadastro.DataPropertyName = "DtReserva";
             this.DtCadastro.HeaderText = "Data de reserva";
             this.DtCadastro.Name = "DtCadastro";
+            this.DtCadastro.ReadOnly = true;
             this.DtCadastro.Width = 120;
             // 
             // frmNovaReserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(536, 359);
+            this.ClientSize = new System.Drawing.Size(582, 359);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;

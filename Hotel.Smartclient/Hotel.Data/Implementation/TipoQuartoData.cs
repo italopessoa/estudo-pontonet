@@ -55,7 +55,6 @@ namespace Hotel.Data.Implementation
                     tiposQuarto = tiposQuartoQuery.ToList<tipo_quarto>();
                 }
             }
-
             return tiposQuarto;
         }
 

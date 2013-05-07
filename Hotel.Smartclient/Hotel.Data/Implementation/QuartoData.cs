@@ -12,10 +12,9 @@ namespace Hotel.Data.Implementation
 
         public void InsertQuarto(quarto novoQuarto)
         {
-            using (HotelEntities contexto = new HotelEntities())
+            using (var contexto = new HotelEntities())
             {
                 novoQuarto.DtCadastro = DateTime.Now;
-                contexto.AddToquarto(novoQuarto);
                 contexto.SaveChanges();
             }
         }
@@ -37,10 +36,14 @@ namespace Hotel.Data.Implementation
             {
                 quarto quartoAux = contexto.quarto.First(q => q.IdQuarto == quarto.IdQuarto);
 
-                /*if (quartoeAux != null)
+                if (quartoAux != null)
                 {
-                    quartoeAux.NomeCliente = cliente.NomeCliente;
-                }*/
+                    if(quarto.PrecoQuarto>0)
+                        quartoAux.PrecoQuarto = quarto.PrecoQuarto;
+
+                    if (quarto.tipo_quarto != null)
+                        quartoAux.tipo_quarto = quarto.tipo_quarto;
+                }
                 contexto.SaveChanges();
             }
         }
@@ -71,6 +74,7 @@ namespace Hotel.Data.Implementation
                 {
                     if (maior)
                     {
+                        //o tipo de quarto vai ser recuperado na tela, pois nao esta dando certo
                         quartosQuery = from quarto q in contexto.quarto
                                        where q.tipo_quarto.IdTipoQuarto == tipoQuarto.IdTipoQuarto
                                        && q.PrecoQuarto >= preco

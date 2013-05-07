@@ -31,7 +31,12 @@ namespace Hotel.Smartclient.Forms
             {
                 quarto novoQuarto = new quarto();
                 
-                novoQuarto.tipo_quarto = this.hotelFacade.SelectTipoQuartoById(((tipo_quarto) this.cmbTipoQuarto.SelectedItem).IdTipoQuarto);
+                //novoQuarto.tipo_quarto = this.hotelFacade.SelectTipoQuartoById(((tipo_quarto) this.cmbTipoQuarto.SelectedItem).IdTipoQuarto);
+                novoQuarto.tipo_quarto = new tipo_quarto() { 
+                       IdTipoQuarto = Convert.ToInt32(this.cmbTipoQuarto.SelectedValue),
+                       NomeTipoQuarto = this.cmbTipoQuarto.SelectedText,
+                       //DtCadastro = DateTime.Now
+                };
                 novoQuarto.PrecoQuarto = Double.Parse(this.txtDiaria.Text);
                 try
                 {
