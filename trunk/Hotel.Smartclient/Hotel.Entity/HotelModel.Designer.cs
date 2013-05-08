@@ -323,6 +323,18 @@ namespace Hotel.Entity
                 }
             }
         }
+
+        public int Idade
+        {
+            get
+            {
+                int anos = System.DateTime.Now.Year - this._DtNascimento.Year;
+                if (System.DateTime.Now.Month < this._DtNascimento.Month ||
+                    (System.DateTime.Now.Month == this._DtNascimento.Month && System.DateTime.Now.Day < this._DtNascimento.Day))
+                    anos--;
+                return anos;
+            }
+        }
     }
     /// <summary>
     /// There are no comments for HotelModel.quarto in the schema.

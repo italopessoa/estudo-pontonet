@@ -156,6 +156,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Utils\CalendarCell.cs" />
+    <Compile Include="Utils\CalendarColumn.cs" />
+    <Compile Include="Utils\CalendarEditingControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Hotel.Entity\Hotel.Entity.csproj">

@@ -40,6 +40,9 @@ namespace Hotel.Data.Implementation
                 if (clienteAux != null)
                 {
                     clienteAux.NomeCliente = cliente.NomeCliente;
+                    clienteAux.DtNascimento = cliente.DtNascimento;
+                    clienteAux.TelefoneCliente = cliente.TelefoneCliente;
+                    clienteAux.EmailCliente = cliente.EmailCliente;
                 }
                 contexto.SaveChanges();
             }
