@@ -35,6 +35,12 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblIdCliente = new System.Windows.Forms.Label();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DtCadastro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DtAlteracao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,12 +48,6 @@
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.calendarColumn1 = new Hotel.Smartclient.Utils.CalendarColumn();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DtCadastro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DtAlteracao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.SuspendLayout();
@@ -130,6 +130,48 @@
             this.dgvClientes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellDoubleClick);
             this.dgvClientes.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvClientes_CellFormatting);
             // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "IdCliente";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            // 
+            // Nome
+            // 
+            this.Nome.DataPropertyName = "NomeCliente";
+            this.Nome.HeaderText = "Nome";
+            this.Nome.Name = "Nome";
+            this.Nome.ReadOnly = true;
+            // 
+            // DtCadastro
+            // 
+            this.DtCadastro.HeaderText = "Idade";
+            this.DtCadastro.Name = "DtCadastro";
+            this.DtCadastro.ReadOnly = true;
+            this.DtCadastro.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "TelefoneCliente";
+            this.Column1.HeaderText = "Telefone";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "EmailCliente";
+            this.Column2.HeaderText = "Email";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // DtAlteracao
+            // 
+            this.DtAlteracao.DataPropertyName = "DtCadastro";
+            this.DtAlteracao.HeaderText = "DtCadastro";
+            this.DtAlteracao.Name = "DtAlteracao";
+            this.DtAlteracao.ReadOnly = true;
+            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "IdCliente";
@@ -180,48 +222,6 @@
             this.calendarColumn1.Name = "calendarColumn1";
             this.calendarColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.calendarColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "IdCliente";
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            // 
-            // Nome
-            // 
-            this.Nome.DataPropertyName = "NomeCliente";
-            this.Nome.HeaderText = "Nome";
-            this.Nome.Name = "Nome";
-            this.Nome.ReadOnly = true;
-            // 
-            // DtCadastro
-            // 
-            this.DtCadastro.HeaderText = "Idade";
-            this.DtCadastro.Name = "DtCadastro";
-            this.DtCadastro.ReadOnly = true;
-            this.DtCadastro.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "TelefoneCliente";
-            this.Column1.HeaderText = "Telefone";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "EmailCliente";
-            this.Column2.HeaderText = "Email";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // DtAlteracao
-            // 
-            this.DtAlteracao.DataPropertyName = "DtCadastro";
-            this.DtAlteracao.HeaderText = "DtCadastro";
-            this.DtAlteracao.Name = "DtAlteracao";
-            this.DtAlteracao.ReadOnly = true;
             // 
             // frmConsultarHospede
             // 

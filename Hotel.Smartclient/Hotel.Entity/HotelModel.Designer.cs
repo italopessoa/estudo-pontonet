@@ -773,5 +773,14 @@ namespace Hotel.Entity
                 }
             }
         }
+
+        public override bool Equals(object obj)
+        {
+            if (this == obj) return true;
+            if ((obj == null) || (obj.GetType() != this.GetType())) return false;
+            tipo_quarto castObj = (tipo_quarto)obj;
+            return (castObj != null) &&
+                (this._IdTipoQuarto == castObj._IdTipoQuarto);
+        }
     }
 }
