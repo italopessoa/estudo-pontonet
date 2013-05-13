@@ -32,7 +32,7 @@ namespace Hotel.Smartclient.Forms
                 try
                 {
                     this.hotelFacade.InsertTipoQuarto(tipoQuarto);
-                    MessageBox.Show("Cliente cadastado com sucesso!", "Operação completada.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Tipo de Quarto cadastado com sucesso!", "Operação completada.", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
                 {

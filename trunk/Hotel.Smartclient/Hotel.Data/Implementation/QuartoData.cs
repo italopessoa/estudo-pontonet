@@ -15,6 +15,8 @@ namespace Hotel.Data.Implementation
             using (var contexto = new HotelEntities())
             {
                 novoQuarto.DtCadastro = DateTime.Now;
+                novoQuarto.tipo_quarto = contexto.tipo_quarto.First(tq => tq.IdTipoQuarto == novoQuarto.tipo_quarto.IdTipoQuarto);
+                contexto.AddToquarto(novoQuarto);
                 contexto.SaveChanges();
             }
         }
@@ -35,6 +37,7 @@ namespace Hotel.Data.Implementation
             using (HotelEntities contexto = new HotelEntities())
             {
                 quarto quartoAux = contexto.quarto.First(q => q.IdQuarto == quarto.IdQuarto);
+                quartoAux.tipo_quartoReference.Load();
 
                 if (quartoAux != null)
                 {
@@ -42,7 +45,7 @@ namespace Hotel.Data.Implementation
                         quartoAux.PrecoQuarto = quarto.PrecoQuarto;
 
                     if (quarto.tipo_quarto != null)
-                        quartoAux.tipo_quarto = quarto.tipo_quarto;
+                        quartoAux.tipo_quarto = contexto.tipo_quarto.First(tq => tq.IdTipoQuarto == quarto.tipo_quarto.IdTipoQuarto);
                 }
                 contexto.SaveChanges();
             }
@@ -116,7 +119,10 @@ namespace Hotel.Data.Implementation
                 }
 
                 if (quartosQuery != null)
+                {
                     quartos = quartosQuery.ToList<quarto>();
+                    foreach (quarto q in quartos) q.tipo_quartoReference.Load();
+                }
             }
 
             return quartos;
