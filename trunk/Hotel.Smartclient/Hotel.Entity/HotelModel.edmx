@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="HotelModel.Store" Alias="Self" Provider="Devart.Data.PostgreSql" ProviderManifestToken="PostgreSQL" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+    <Schema Namespace="HotelModel.Store" Alias="Self" Provider="Devart.Data.PostgreSql" ProviderManifestToken="PostgreSQL" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
         <EntityContainer Name="HotelModelStoreContainer">
           <EntitySet Name="cliente" EntityType="HotelModel.Store.cliente" store:Type="Tables" Schema="public" />
           <EntitySet Name="quarto" EntityType="HotelModel.Store.quarto" store:Type="Tables" Schema="public" />
@@ -52,6 +52,7 @@
           <Property Name="IdQuarto" Type="int" Nullable="false" />
           <Property Name="DtEntrada" Type="date" Nullable="false" />
           <Property Name="DtSaida" Type="date" Nullable="false" />
+          <Property Name="DtReserva" Type="date" />
         </EntityType>
         <EntityType Name="tipo_quarto">
           <Key>
@@ -97,8 +98,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="HotelModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
@@ -151,7 +151,7 @@
           <Property Name="DtSaida" Type="DateTime" Nullable="false" />
           <NavigationProperty Name="cliente" Relationship="HotelModel.reserva_cliente_fk" FromRole="reserva" ToRole="cliente" />
           <NavigationProperty Name="quarto" Relationship="HotelModel.reserva_quarto_fk" FromRole="reserva" ToRole="quarto" />
-        </EntityType>
+          <Property Name="DtReserva" Type="DateTime" Nullable="true" /></EntityType>
         <EntityType Name="tipo_quarto">
           <Key>
             <PropertyRef Name="IdTipoQuarto" />
@@ -203,6 +203,7 @@
           <EntitySetMapping Name="reserva">
             <EntityTypeMapping TypeName="IsTypeOf(HotelModel.reserva)">
               <MappingFragment StoreEntitySet="reserva">
+                <ScalarProperty Name="DtReserva" ColumnName="DtReserva" />
                 <ScalarProperty Name="IdReserva" ColumnName="IdReserva" />
                 <ScalarProperty Name="DtEntrada" ColumnName="DtEntrada" />
                 <ScalarProperty Name="DtSaida" ColumnName="DtSaida" />

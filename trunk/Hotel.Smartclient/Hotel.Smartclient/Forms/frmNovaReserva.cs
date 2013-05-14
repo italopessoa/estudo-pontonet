@@ -64,7 +64,20 @@ namespace Hotel.Smartclient.Forms
                 NomeTipoQuarto = this.quartoReserva.tipo_quarto.NomeTipoQuarto
             };
 
-            this.hotelFacade.InsertReserva(novaReserva);
+            try
+            {
+                this.hotelFacade.InsertReserva(novaReserva);
+                MessageBox.Show("Quarto reservado com sucesso!", "Operação completada.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao realizar reserva.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                this.ListarReservas();
+            }
+            
         }
 
         private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
