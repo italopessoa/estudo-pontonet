@@ -14,6 +14,8 @@ namespace Hotel.Data.Implementation
         {
             using (HotelEntities contexto = new HotelEntities())
             {
+                novaReserva.cliente = contexto.cliente.First(c => c.IdCliente == novaReserva.cliente.IdCliente);
+                novaReserva.quarto = contexto.quarto.First(q => q.IdQuarto == novaReserva.quarto.IdQuarto);
                 contexto.AddToreserva(novaReserva);
                 contexto.SaveChanges();
             }
@@ -23,7 +25,8 @@ namespace Hotel.Data.Implementation
         {
             using (HotelEntities contexto = new HotelEntities())
             {
-                contexto.DeleteObject(reserva);
+
+                contexto.DeleteObject(contexto.reserva.First(r => r.IdReserva == reserva.IdReserva));
                 contexto.SaveChanges();
             }
         }
@@ -50,6 +53,11 @@ namespace Hotel.Data.Implementation
                 {
                     reservas = reservasQuery.ToList<reserva>();
                 }
+                foreach (reserva item in reservasQuery)
+                {
+                    item.clienteReference.Load();
+                    item.quartoReference.Load();
+                }
             }
 
             return reservas;
@@ -61,34 +69,42 @@ namespace Hotel.Data.Implementation
 
             using (HotelEntities contexto = new HotelEntities())
             {
+                IQueryable<reserva> reservasQuery = null;
                 if (cliente != null && quarto == null)
                 {
-                    var reservasQuery = from reserva r in contexto.reserva 
-                                        where r.cliente.IdCliente == cliente.IdCliente select r;
-                } 
+                    reservasQuery = from reserva r in contexto.reserva
+                                    where r.cliente.IdCliente == cliente.IdCliente
+                                    select r;
+                }
                 else if (cliente == null && quarto != null)
                 {
-                    var reservasQuery = from reserva r in contexto.reserva 
-                                        where r.quarto.IdQuarto == quarto.IdQuarto select r;
+                    reservasQuery = from reserva r in contexto.reserva
+                                    where r.quarto.IdQuarto == quarto.IdQuarto
+                                    select r;
                 }
                 else if (cliente != null && quarto != null)
                 {
-                    var reservasQuery = from reserva r in contexto.reserva
-                                        where r.quarto.IdQuarto == quarto.IdQuarto
-                                        && r.cliente.IdCliente == cliente.IdCliente
-                                        select r;
+                    reservasQuery = from reserva r in contexto.reserva
+                                    where r.quarto.IdQuarto == quarto.IdQuarto
+                                    && r.cliente.IdCliente == cliente.IdCliente
+                                    select r;
                 }
                 else
                 {
-                    var reservasQuery = from reserva r in contexto.reserva select r;
+                    reservasQuery = from reserva r in contexto.reserva select r;
+                }
+
+                foreach (reserva item in reservasQuery)
+                {
+                    item.clienteReference.Load();
+                    item.quartoReference.Load();
+                    reservas = reservasQuery.ToList<reserva>();
                 }
             }
-
-            
 
             return reservas;
         }
 
         #endregion
     }
-} 
+}

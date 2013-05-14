@@ -16,6 +16,7 @@ namespace Hotel.Smartclient.Forms
     {
         private cliente clienteReserva = new cliente();
         private quarto quartoReserva = new quarto();
+        private IList<reserva> reservas = null;
         private IHotelFacade hotelFacade = new HotelFacade();
 
         public frmNovaReserva()
@@ -46,7 +47,8 @@ namespace Hotel.Smartclient.Forms
 
         private void ListarReservas()
         {
-            this.dataGridView1.DataSource = this.hotelFacade.SelectReservas();
+            this.reservas = this.hotelFacade.SelectReservas();
+            this.dataGridView1.DataSource = this.reservas;
         }
 
         private void btnReservar_Click(object sender, EventArgs e)
@@ -63,6 +65,20 @@ namespace Hotel.Smartclient.Forms
             };
 
             this.hotelFacade.InsertReserva(novaReserva);
+        }
+
+        private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.ColumnIndex == 1)
+            {
+                if (this.dataGridView1[e.ColumnIndex, e.RowIndex].Value == null)
+                    this.dataGridView1[e.ColumnIndex, e.RowIndex].Value = this.reservas[e.RowIndex].cliente.NomeCliente;
+            }
+            else if (e.ColumnIndex == 2)
+            {
+                if (this.dataGridView1[e.ColumnIndex, e.RowIndex].Value == null)
+                    this.dataGridView1[e.ColumnIndex, e.RowIndex].Value = this.reservas[e.RowIndex].quarto.IdQuarto;
+            }
         }
     }
 }
