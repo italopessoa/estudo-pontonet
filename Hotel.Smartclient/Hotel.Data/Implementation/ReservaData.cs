@@ -35,9 +35,11 @@ namespace Hotel.Data.Implementation
         {
             using (HotelEntities contexto = new HotelEntities())
             {
-                reserva reservaAux = contexto.reserva.First(r => r.IdReserva == reserva.IdReserva);
+                reserva reservaAux = contexto.reserva.First(r => r.IdReserva == reserva.IdReserva && r.cliente.IdCliente == reserva.cliente.IdCliente);
 
-                contexto.DeleteObject(reservaAux);
+                reservaAux.DtEntrada = reserva.DtEntrada;
+                reservaAux.DtSaida = reserva.DtSaida;
+
                 contexto.SaveChanges();
             }
         }
@@ -98,8 +100,8 @@ namespace Hotel.Data.Implementation
                 {
                     item.clienteReference.Load();
                     item.quartoReference.Load();
-                    reservas = reservasQuery.ToList<reserva>();
                 }
+                reservas = reservasQuery.ToList<reserva>();
             }
 
             return reservas;

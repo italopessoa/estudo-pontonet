@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using Hotel.Entity;
 using Hotel.Facade;
 using Hotel.Facade.Implementation;
+using System.Collections.ObjectModel;
 
 namespace Hotel.Smartclient.Forms
 {
@@ -50,10 +51,18 @@ namespace Hotel.Smartclient.Forms
         {
             cliente clienteReserva = null;
             quarto quartoReserva = null;
-            clienteReserva = new cliente();
-            clienteReserva.IdCliente = Int32.Parse(this.cmbClientes.SelectedValue.ToString());
-            quartoReserva = new quarto();
-            quartoReserva.IdQuarto = Int32.Parse(this.cmbQuartos.SelectedValue.ToString());
+
+            if (this.cmbClientes.SelectedIndex > 0)
+            {
+                clienteReserva = new cliente();
+                clienteReserva.IdCliente = ((cliente)this.cmbClientes.SelectedItem).IdCliente;
+            }
+
+            if (this.cmbQuartos.SelectedIndex > 0)
+            {
+                quartoReserva = new quarto();
+                quartoReserva.IdQuarto = ((quarto)this.cmbQuartos.SelectedItem).IdQuarto;
+            }
 
             this.reservas = this.hotelFacade.SelectReservaByClienteOrQuarto(clienteReserva, quartoReserva);
         }
@@ -65,12 +74,23 @@ namespace Hotel.Smartclient.Forms
 
             this.cmbClientes.DisplayMember = "NomeCliente";
             this.cmbClientes.ValueMember = "IdCliente";
-            this.cmbClientes.DataSource = this.hotelFacade.SelectClientes();
+            this.cmbClientes.Items.Add("");
+            this.cmbClientes.SelectedIndex = 0;
+
+            foreach (var item in this.hotelFacade.SelectClientes())
+            {
+                this.cmbClientes.Items.Add(item);
+            }
 
             this.cmbQuartos.DisplayMember = "IdQuarto";
             this.cmbQuartos.ValueMember = "IdQuarto";
-            this.cmbQuartos.DataSource = this.hotelFacade.SelectQuartos();
+            this.cmbQuartos.Items.Add("");
+            this.cmbQuartos.SelectedIndex = 0;
 
+            foreach (var item in this.hotelFacade.SelectQuartos())
+            {
+                this.cmbQuartos.Items.Add(item);
+            }
         }
 
         private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -87,7 +107,23 @@ namespace Hotel.Smartclient.Forms
 
         private void btnAlterar_Click(int p)
         {
-            throw new NotImplementedException();
+            //reserva reservaAlterar = new reserva();
+            //reservaAlterar.IdReserva = Int32.Parse(this.dataGridView1[0, p].Value.ToString());
+
+            //reservaAlterar.cliente = new cliente();
+            //reservaAlterar.cliente.IdCliente = Int32.Parse(this.dataGridView1[1, p].Value.ToString());
+
+            //reservaAlterar.quarto = new quarto();
+            //reservaAlterar.quarto.IdQuarto = Int32.Parse(this.dataGridView1[2, p].Value.ToString());
+
+            //try
+            //{
+            //    this.hotelFacade.UpdateReserva(reservaAlterar);
+            //}
+            //catch (Exception ex)
+            //{
+            //}
+
         }
 
         private void btnExcluir_Click(int p)
