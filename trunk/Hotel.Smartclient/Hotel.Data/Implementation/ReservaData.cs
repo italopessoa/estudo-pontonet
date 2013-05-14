@@ -35,7 +35,7 @@ namespace Hotel.Data.Implementation
         {
             using (HotelEntities contexto = new HotelEntities())
             {
-                reserva reservaAux = contexto.reserva.First(r => r.IdReserva == reserva.IdReserva && r.cliente.IdCliente == reserva.cliente.IdCliente);
+                reserva reservaAux = contexto.reserva.First(r => r.IdReserva == reserva.IdReserva);
 
                 reservaAux.DtEntrada = reserva.DtEntrada;
                 reservaAux.DtSaida = reserva.DtSaida;
