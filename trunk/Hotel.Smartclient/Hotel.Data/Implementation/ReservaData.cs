@@ -16,6 +16,7 @@ namespace Hotel.Data.Implementation
             {
                 novaReserva.cliente = contexto.cliente.First(c => c.IdCliente == novaReserva.cliente.IdCliente);
                 novaReserva.quarto = contexto.quarto.First(q => q.IdQuarto == novaReserva.quarto.IdQuarto);
+                novaReserva.DtReserva = DateTime.Now;
                 contexto.AddToreserva(novaReserva);
                 contexto.SaveChanges();
             }
