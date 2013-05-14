@@ -25,26 +25,28 @@ namespace Hotel.Smartclient.Forms
 
         private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            if (e.ColumnIndex == 1)
+            switch (e.ColumnIndex)
             {
-                if (this.dataGridView1[e.ColumnIndex, e.RowIndex].Value == null)
-                {
-                    this.dataGridView1[e.ColumnIndex, e.RowIndex].Value = this.reservas[e.RowIndex].cliente.NomeCliente;
-                }
-            }
-            else if (e.ColumnIndex == 2)
-            {
-                if (this.dataGridView1[e.ColumnIndex, e.RowIndex].Value == null)
-                {
-                    this.dataGridView1[e.ColumnIndex, e.RowIndex].Value = this.reservas[e.RowIndex].quarto.IdQuarto;
-                }
+                case 1:
+                    if (this.dataGridView1[e.ColumnIndex, e.RowIndex].Value == null)
+                    {
+                        this.dataGridView1[e.ColumnIndex, e.RowIndex].Value = this.reservas[e.RowIndex].cliente.NomeCliente;
+                    }
+                    break;
+                case 2:
+                    if (this.dataGridView1[e.ColumnIndex, e.RowIndex].Value == null)
+                    {
+                        this.dataGridView1[e.ColumnIndex, e.RowIndex].Value = this.reservas[e.RowIndex].quarto.IdQuarto;
+                    }
+                    break;
+                default:
+                    break;
             }
         }
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
             this.carregarReservas();
-            this.dataGridView1.DataSource = this.reservas;
         }
 
         private void carregarReservas()
@@ -65,6 +67,7 @@ namespace Hotel.Smartclient.Forms
             }
 
             this.reservas = this.hotelFacade.SelectReservaByClienteOrQuarto(clienteReserva, quartoReserva);
+            this.dataGridView1.DataSource = this.reservas;
         }
 
         private void frmConsultarReserva_Load(object sender, EventArgs e)
@@ -107,22 +110,24 @@ namespace Hotel.Smartclient.Forms
 
         private void btnAlterar_Click(int p)
         {
-            //reserva reservaAlterar = new reserva();
-            //reservaAlterar.IdReserva = Int32.Parse(this.dataGridView1[0, p].Value.ToString());
+            reserva reservaAlterar = new reserva();
+            reservaAlterar.IdReserva = Int32.Parse(this.dataGridView1[0, p].Value.ToString());
+            reservaAlterar.DtEntrada = DateTime.Parse(this.dataGridView1[3, p].Value.ToString());
+            reservaAlterar.DtSaida = DateTime.Parse(this.dataGridView1[4, p].Value.ToString());
 
-            //reservaAlterar.cliente = new cliente();
-            //reservaAlterar.cliente.IdCliente = Int32.Parse(this.dataGridView1[1, p].Value.ToString());
-
-            //reservaAlterar.quarto = new quarto();
-            //reservaAlterar.quarto.IdQuarto = Int32.Parse(this.dataGridView1[2, p].Value.ToString());
-
-            //try
-            //{
-            //    this.hotelFacade.UpdateReserva(reservaAlterar);
-            //}
-            //catch (Exception ex)
-            //{
-            //}
+            try
+            {
+                this.hotelFacade.UpdateReserva(reservaAlterar);
+                MessageBox.Show("Dados da reserva alterados com sucesso!", "Operação completada.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao alterar dados da reserva.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                this.carregarReservas();
+            }
 
         }
 
@@ -133,10 +138,15 @@ namespace Hotel.Smartclient.Forms
             try
             {
                 this.hotelFacade.RemoveReserva(reservaExcluir);
-                this.carregarReservas();
+                MessageBox.Show("Reserva excluida!", "Operação completada.", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
+                MessageBox.Show("Erro ao escluir reserva.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                this.carregarReservas();
             }
             
         }
