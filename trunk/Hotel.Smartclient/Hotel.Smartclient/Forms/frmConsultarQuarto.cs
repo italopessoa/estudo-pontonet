@@ -74,14 +74,16 @@ namespace Hotel.Smartclient.Forms
             {
                 DataGridViewColumn columnIdTipoQuarto = this.dataGridView1.Columns[1];
                 DataGridViewColumn columnNomeTipoQuarto = this.dataGridView1.Columns[2];
+                columnNomeTipoQuarto.HeaderText = "Tipo quarto atual";
                 DataGridViewComboBoxColumn comboboxColumn = new DataGridViewComboBoxColumn();
                 
                 this.dataGridView1.Columns.Remove(columnIdTipoQuarto);
-                this.dataGridView1.Columns.Remove(columnNomeTipoQuarto);
+                
+                //this.dataGridView1.Columns.Remove(columnNomeTipoQuarto);
                 comboboxColumn.ReadOnly = false;
                 comboboxColumn.DisplayMember = "NomeTipoQuarto";
                 comboboxColumn.ValueMember = "IdTipoQuarto";
-                comboboxColumn.HeaderText = "Tipo de Quarto";
+                comboboxColumn.HeaderText = "Novo Tipo de Quarto";
                 comboboxColumn.ToolTipText = comboboxColumn.ValueMember;
 
                 List<tipo_quarto> copyList = new List<tipo_quarto>();
@@ -91,7 +93,8 @@ namespace Hotel.Smartclient.Forms
 
                 this.dataGridView1.Columns.Insert(1, comboboxColumn);
                 this.dataGridView1.Columns[1].ReadOnly = false;
-                this.dataGridView1.Columns[2].ReadOnly = false;
+                this.dataGridView1.Columns[2].ReadOnly = true;
+                this.dataGridView1.Columns[3].ReadOnly = false;
 
                 DataGridViewButtonColumn editButtonColumn = new DataGridViewButtonColumn();
                 editButtonColumn.Text = "Editar";
@@ -106,11 +109,17 @@ namespace Hotel.Smartclient.Forms
             if (e.ColumnIndex == 1 && this.quartoReserva != null)
             {
                 DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
-                if(row.Cells[1].Value == null)
+                if (row.Cells[1].Value == null)
                     row.Cells[1].Value = ((tipo_quarto)this.cmbTipoQuarto.SelectedItem).NomeTipoQuarto;
 
                 if (row.Cells[2].Value == null)
                     row.Cells[2].Value = ((tipo_quarto)this.cmbTipoQuarto.SelectedItem).IdTipoQuarto;
+            }
+            else if(e.ColumnIndex == 1 && this.quartoReserva == null)
+            {
+                DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
+                if (row.Cells[2].Value == null)
+                    row.Cells[2].Value = ((tipo_quarto)this.cmbTipoQuarto.SelectedItem).NomeTipoQuarto;
             }
         }
 
@@ -123,7 +132,7 @@ namespace Hotel.Smartclient.Forms
 
         private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (e.ColumnIndex == 4)
+            if (e.ColumnIndex == 5)
             {
                 this.btnAlterar_Click(e.RowIndex);
             }
@@ -135,7 +144,7 @@ namespace Hotel.Smartclient.Forms
             {
                 quarto quartoAlterar = new quarto();
                 quartoAlterar.IdQuarto = Int32.Parse(this.dataGridView1[0, rowIndex].Value.ToString());
-                quartoAlterar.PrecoQuarto = Double.Parse(this.dataGridView1[2, rowIndex].Value.ToString());
+                quartoAlterar.PrecoQuarto = Double.Parse(this.dataGridView1[3, rowIndex].Value.ToString());
                 quartoAlterar.tipo_quarto = new tipo_quarto();
                 quartoAlterar.tipo_quarto.IdTipoQuarto = (int)this.dataGridView1.Rows[rowIndex].Cells[1].Value;
                 quartoAlterar.tipo_quarto.NomeTipoQuarto =

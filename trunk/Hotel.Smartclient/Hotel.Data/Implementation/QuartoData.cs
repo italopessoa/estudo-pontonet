@@ -41,7 +41,7 @@ namespace Hotel.Data.Implementation
 
                 if (quartoAux != null)
                 {
-                    if(quarto.PrecoQuarto>0)
+                    if (quarto.PrecoQuarto > 0)
                         quartoAux.PrecoQuarto = quarto.PrecoQuarto;
 
                     if (quarto.tipo_quarto != null)
@@ -104,12 +104,14 @@ namespace Hotel.Data.Implementation
                     if (maior)
                     {
                         quartosQuery = from quarto q in contexto.quarto
-                                       where q.PrecoQuarto >= preco select q;
+                                       where q.PrecoQuarto >= preco
+                                       select q;
                     }
                     else
                     {
                         quartosQuery = from quarto q in contexto.quarto
-                                       where q.PrecoQuarto <= preco select q;
+                                       where q.PrecoQuarto <= preco
+                                       select q;
                     }
                 }
 
@@ -120,8 +122,8 @@ namespace Hotel.Data.Implementation
 
                 if (quartosQuery != null)
                 {
+                    foreach (quarto q in quartosQuery) q.tipo_quartoReference.Load();
                     quartos = quartosQuery.ToList<quarto>();
-                    foreach (quarto q in quartos) q.tipo_quartoReference.Load();
                 }
             }
 
