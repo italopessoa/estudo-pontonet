@@ -14,7 +14,7 @@
 [assembly: global::System.Data.Objects.DataClasses.EdmRelationshipAttribute("HotelModel", "tiop_quarto_fk", "tipo_quarto", global::System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Hotel.Entity.tipo_quarto), "quarto", global::System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Hotel.Entity.quarto))]
 
 // Original file name:
-// Generation date: 07/05/2013 15:34:59
+// Generation date: 14/05/2013 13:08:26
 namespace Hotel.Entity
 {
     
@@ -583,6 +583,29 @@ namespace Hotel.Entity
         private global::System.DateTime _DtSaida;
         partial void OnDtSaidaChanging(global::System.DateTime value);
         partial void OnDtSaidaChanged();
+        /// <summary>
+        /// There are no comments for Property DtReserva in the schema.
+        /// </summary>
+        [global::System.Data.Objects.DataClasses.EdmScalarPropertyAttribute()]
+        [global::System.Runtime.Serialization.DataMemberAttribute()]
+        public global::System.Nullable<global::System.DateTime> DtReserva
+        {
+            get
+            {
+                return this._DtReserva;
+            }
+            set
+            {
+                this.OnDtReservaChanging(value);
+                this.ReportPropertyChanging("DtReserva");
+                this._DtReserva = global::System.Data.Objects.DataClasses.StructuralObject.SetValidValue(value);
+                this.ReportPropertyChanged("DtReserva");
+                this.OnDtReservaChanged();
+            }
+        }
+        private global::System.Nullable<global::System.DateTime> _DtReserva;
+        partial void OnDtReservaChanging(global::System.Nullable<global::System.DateTime> value);
+        partial void OnDtReservaChanged();
         /// <summary>
         /// There are no comments for cliente in the schema.
         /// </summary>
