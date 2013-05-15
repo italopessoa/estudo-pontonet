@@ -10,6 +10,9 @@ namespace Hotel.Data.Implementation
     {
         #region IQuartoData Members
 
+        /// <summary>
+        /// <see cref="Hotel.Data.IQuartoData.InsertQuarto"/>
+        /// </summary>
         public void InsertQuarto(quarto novoQuarto)
         {
             using (var contexto = new HotelEntities())
@@ -21,6 +24,9 @@ namespace Hotel.Data.Implementation
             }
         }
 
+        /// <summary>
+        /// <see cref="Hotel.Data.IQuartoData.RemoveQuarto"/>
+        /// </summary>
         public void RemoveQuarto(quarto quarto)
         {
             using (HotelEntities contexto = new HotelEntities())
@@ -32,6 +38,9 @@ namespace Hotel.Data.Implementation
             }
         }
 
+        /// <summary>
+        /// <see cref="Hotel.Data.IQuartoData.UpdateQuarto"/>
+        /// </summary>
         public void UpdateQuarto(quarto quarto)
         {
             using (HotelEntities contexto = new HotelEntities())
@@ -51,6 +60,9 @@ namespace Hotel.Data.Implementation
             }
         }
 
+        /// <summary>
+        /// <see cref="Hotel.Data.IQuartoData.SelectQuartos"/>
+        /// </summary>
         public IList<quarto> SelectQuartos()
         {
             List<quarto> quartos = new List<quarto>();
@@ -67,6 +79,9 @@ namespace Hotel.Data.Implementation
             return quartos;
         }
 
+        /// <summary>
+        /// <see cref="Hotel.Data.IQuartoData.SelectQuartoByTipoQuartoOrPreco"/>
+        /// </summary>
         public IList<quarto> SelectQuartoByTipoQuartoOrPreco(tipo_quarto tipoQuarto, double preco, bool maior)
         {
             List<quarto> quartos = new List<quarto>();
