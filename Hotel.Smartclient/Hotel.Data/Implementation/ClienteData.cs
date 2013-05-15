@@ -10,6 +10,9 @@ namespace Hotel.Data.Implementation
     {
         #region IClienteData Members
 
+        /// <summary>
+        /// <see cref="Hotel.Data.IClienteData.InserirCliente"/>
+        /// </summary>
         public void InsertCliente(cliente novoCliente)
         {
             using (HotelEntities contexto = new HotelEntities())
@@ -20,6 +23,9 @@ namespace Hotel.Data.Implementation
             }
         }
 
+        /// <summary>
+        /// <see cref="Hotel.Data.IClienteData.RemoveCliente"/>
+        /// </summary>
         public void RemoveCliente(cliente cliente)
         {
             using (HotelEntities contexto = new HotelEntities())
@@ -31,6 +37,9 @@ namespace Hotel.Data.Implementation
             }
         }
 
+        /// <summary>
+        /// <see cref="Hotel.Data.IClienteData.UpdateCliente"/>
+        /// </summary>
         public void UpdateCliente(cliente cliente)
         {
             using (HotelEntities contexto = new HotelEntities())
@@ -48,6 +57,9 @@ namespace Hotel.Data.Implementation
             }
         }
 
+        /// <summary>
+        /// <see cref="Hotel.Data.IClienteData.SelectClientesByNome"/>
+        /// </summary>
         public IList<cliente> SelectClientesByNome(string nomeCliente)
         {
             List<cliente> clientes = new List<cliente>();
@@ -64,6 +76,9 @@ namespace Hotel.Data.Implementation
             return clientes;
         }
 
+        /// <summary>
+        /// <see cref="Hotel.Data.IClienteData.SelectClientes"/>
+        /// </summary>
         public IList<cliente> SelectClientes()
         {
             List<cliente> clientes = new List<cliente>();

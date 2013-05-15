@@ -27,26 +27,41 @@ namespace Hotel.Business.Implementation
 
         #region IQuartoBusiness Members
 
+        /// <summary>
+        /// <see cref="Hotel.Business.IQuartoBusiness.InsertQuarto"/>
+        /// </summary>
         public void InsertQuarto(quarto novoQuarto)
         {
             this.quartoData.InsertQuarto(novoQuarto);
         }
 
+        /// <summary>
+        /// <see cref="Hotel.Business.IQuartoBusiness.RemoveQuarto"/>
+        /// </summary>
         public void RemoveQuarto(quarto quarto)
         {
             this.quartoData.RemoveQuarto(quarto);
         }
 
+        /// <summary>
+        /// <see cref="Hotel.Business.IQuartoBusiness.UpdateQuarto"/>
+        /// </summary>
         public void UpdateQuarto(quarto quarto)
         {
             this.quartoData.UpdateQuarto(quarto);
         }
 
+        /// <summary>
+        /// <see cref="Hotel.Business.IQuartoBusiness.SelectQuartos"/>
+        /// </summary>
         public IList<quarto> SelectQuartos()
         {
             return this.quartoData.SelectQuartos();
         }
 
+        /// <summary>
+        /// <see cref="Hotel.Business.IQuartoBusiness.SelectQuartoByTipoQuartoOrPreco"/>
+        /// </summary>
         public IList<quarto> SelectQuartoByTipoQuartoOrPreco(tipo_quarto tipoQuarto, double preco, bool maior)
         {
             return this.quartoData.SelectQuartoByTipoQuartoOrPreco(tipoQuarto, preco, maior);

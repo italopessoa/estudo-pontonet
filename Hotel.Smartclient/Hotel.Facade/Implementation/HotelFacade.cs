@@ -36,26 +36,41 @@ namespace Hotel.Facade.Implementation
 
         #region Cliente
 
+        /// <summary>
+        /// <see cref="Hotel.IHotelFacade.InserirCliente"/>
+        /// </summary>
         public void InsertCliente(cliente novoCliente)
         {
             this.clienteBusiness.InsertCliente(novoCliente);
         }
 
+        /// <summary>
+        /// <see cref="Hotel.IHotelFacade.RemoveCliente"/>
+        /// </summary>
         public void RemoveCliente(cliente cliente)
         {
             this.clienteBusiness.RemoveCliente(cliente);
         }
 
+        /// <summary>
+        /// <see cref="Hotel.IHotelFacade.UpdateCliente"/>
+        /// </summary>
         public void UpdateCliente(cliente cliente)
         {
             this.clienteBusiness.UpdateCliente(cliente);
         }
 
+        /// <summary>
+        /// <see cref="Hotel.IHotelFacade.SelectClientesByNome"/>
+        /// </summary>
         public IList<cliente> SelectClientesByNome(string nomeCliente)
         {
             return this.clienteBusiness.SelectClientesByNome(nomeCliente);
         }
 
+        /// <summary>
+        /// <see cref="Hotel.IHotelFacade.SelectClientes"/>
+        /// </summary>
         public IList<cliente> SelectClientes()
         {
             return this.clienteBusiness.SelectClientes();
@@ -94,26 +109,41 @@ namespace Hotel.Facade.Implementation
 
         #region Quarto
 
+        /// <summary>
+        /// <see cref="Hotel.Facade.IHotelFacade.InsertQuarto"/>
+        /// </summary>
         public void InsertQuarto(quarto novoQuarto)
         {
             this.quartoBusiness.InsertQuarto(novoQuarto);
         }
 
+        /// <summary>
+        /// <see cref="Hotel.Facade.IHotelFacade.RemoveQuarto"/>
+        /// </summary>
         public void RemoveQuarto(quarto quarto)
         {
             this.quartoBusiness.RemoveQuarto(quarto);
         }
 
+        /// <summary>
+        /// <see cref="Hotel.Facade.IHotelFacade.UpdateQuarto"/>
+        /// </summary>
         public void UpdateQuarto(quarto quarto)
         {
             this.quartoBusiness.UpdateQuarto(quarto);
         }
 
+        /// <summary>
+        /// <see cref="Hotel.Facade.IHotelFacade.SelectQuartos"/>
+        /// </summary>
         public IList<quarto> SelectQuartos()
         {
             return this.quartoBusiness.SelectQuartos();
         }
 
+        /// <summary>
+        /// <see cref="Hotel.Facade.IHotelFacade.SelectQuartoByTipoQuartoOrPreco"/>
+        /// </summary>
         public IList<quarto> SelectQuartoByTipoQuartoOrPreco(tipo_quarto tipoQuarto, double preco, bool maior)
         {
             return this.quartoBusiness.SelectQuartoByTipoQuartoOrPreco(tipoQuarto, preco, maior);
