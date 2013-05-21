@@ -14,10 +14,14 @@ namespace Hotel.Data.Implementation
         {
             using (HotelEntities contexto = new HotelEntities())
             {
-                novaReserva.cliente = contexto.cliente.First(c => c.IdCliente == novaReserva.cliente.IdCliente);
-                novaReserva.quarto = contexto.quarto.First(q => q.IdQuarto == novaReserva.quarto.IdQuarto);
-                novaReserva.DtReserva = DateTime.Now;
-                contexto.AddToreserva(novaReserva);
+                int idTipoQuarto = novaReserva.quarto.tipo_quarto.IdTipoQuarto;
+                reserva aux = new reserva();
+
+                aux.cliente = contexto.cliente.First(c => c.IdCliente == novaReserva.cliente.IdCliente);
+                aux.quarto = contexto.quarto.First(q => q.IdQuarto == novaReserva.quarto.IdQuarto);
+                aux.quarto.tipo_quarto = contexto.tipo_quarto.First(tq => tq.IdTipoQuarto == idTipoQuarto);
+                aux.DtReserva = DateTime.Now;
+                contexto.AddToreserva(aux);
                 contexto.SaveChanges();
             }
         }
@@ -26,7 +30,6 @@ namespace Hotel.Data.Implementation
         {
             using (HotelEntities contexto = new HotelEntities())
             {
-
                 contexto.DeleteObject(contexto.reserva.First(r => r.IdReserva == reserva.IdReserva));
                 contexto.SaveChanges();
             }
