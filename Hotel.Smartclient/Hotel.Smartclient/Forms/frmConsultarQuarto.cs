@@ -33,14 +33,26 @@ namespace Hotel.Smartclient.Forms
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
-            DialogResult res = MessageBox.Show("O valor da diária deve ser maior que o informado?", "Valor diária.", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
             bool compararMaior = false;
-            
-            if(res != DialogResult.Cancel){
-                if (res == DialogResult.Yes)
-                compararMaior = true;
-                this.dataGridView1.DataSource = this.hotelFacade.SelectQuartoByTipoQuartoOrPreco(((tipo_quarto) this.cmbTipoQuarto.SelectedItem),double.Parse(this.txtPreco.Text), compararMaior);
+            DialogResult res = new DialogResult();
+
+            if (!String.IsNullOrEmpty(this.txtPreco.Text))
+            {
+                res = MessageBox.Show("O valor da diária deve ser maior que o informado?", "Valor diária.", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+
+                if (res != DialogResult.Cancel)
+                {
+                    if (res == DialogResult.Yes)
+                        compararMaior = true;
+                    this.dataGridView1.DataSource = this.hotelFacade.SelectQuartoByTipoQuartoOrPreco(((tipo_quarto)this.cmbTipoQuarto.SelectedItem), double.Parse(this.txtPreco.Text), compararMaior);
+                }
             }
+            else
+            {
+                this.dataGridView1.DataSource = this.hotelFacade.SelectQuartoByTipoQuartoOrPreco(((tipo_quarto)this.cmbTipoQuarto.SelectedItem), 0, true);
+            }
+            
+            
         }
 
         private void carregarTiposQuarto()
