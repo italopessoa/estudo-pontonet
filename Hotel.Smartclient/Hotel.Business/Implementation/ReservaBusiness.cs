@@ -27,26 +27,41 @@ namespace Hotel.Business.Implementation
 
         #region IReservaBusiness Members
 
+        /// <summary>
+        /// <see cref="Hotel.Business.IReservaBusiness.InsertReserva"/>
+        /// </summary>
         public void InsertReserva(reserva novaReserva)
         {
             this.reservaData.InsertReserva(novaReserva);
         }
 
+        /// <summary>
+        /// <see cref="Hotel.Business.IReservaBusiness.RemoveReserva"/>
+        /// </summary>
         public void RemoveReserva(reserva reserva)
         {
             this.reservaData.RemoveReserva(reserva);
         }
 
+        /// <summary>
+        /// <see cref="Hotel.Business.IReservaBusiness.UpdateReserva"/>
+        /// </summary>
         public void UpdateReserva(reserva reserva)
         {
             this.reservaData.UpdateReserva(reserva);
         }
 
+        /// <summary>
+        /// <see cref="Hotel.Business.IReservaBusiness.SelectReservas"/>
+        /// </summaryBusiness
         public IList<reserva> SelectReservas()
         {
             return this.reservaData.SelectReservas();
         }
 
+        /// <summary>
+        /// <see cref="Hotel.Business.IReservaBusiness.SelectReservaByClienteOrQuarto"/>
+        /// </summary>
         public IList<reserva> SelectReservaByClienteOrQuarto(cliente cliente, quarto quarto)
         {
             return this.reservaData.SelectReservaByClienteOrQuarto(cliente, quarto);

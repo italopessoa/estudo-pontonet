@@ -10,6 +10,9 @@ namespace Hotel.Data.Implementation
     {
         #region IReservaData Members
 
+        /// <summary>
+        /// <see cref="Hotel.Data.IReservaData.InsertReserva"/>
+        /// </summary>
         public void InsertReserva(reserva novaReserva)
         {
             using (HotelEntities contexto = new HotelEntities())
@@ -26,6 +29,9 @@ namespace Hotel.Data.Implementation
             }
         }
 
+        /// <summary>
+        /// <see cref="Hotel.Data.IReservaData.RemoveReserva"/>
+        /// </summary>
         public void RemoveReserva(reserva reserva)
         {
             using (HotelEntities contexto = new HotelEntities())
@@ -35,6 +41,9 @@ namespace Hotel.Data.Implementation
             }
         }
 
+        /// <summary>
+        /// <see cref="Hotel.Data.IReservaData.UpdateReserva"/>
+        /// </summary>
         public void UpdateReserva(reserva reserva)
         {
             using (HotelEntities contexto = new HotelEntities())
@@ -48,6 +57,9 @@ namespace Hotel.Data.Implementation
             }
         }
 
+        /// <summary>
+        /// <see cref="Hotel.Data.IReservaData.SelectReservas"/>
+        /// </summary>
         public IList<reserva> SelectReservas()
         {
             IList<reserva> reservas = new List<reserva>();
@@ -69,6 +81,9 @@ namespace Hotel.Data.Implementation
             return reservas;
         }
 
+        /// <summary>
+        /// <see cref="Hotel.Data.IReservaData.SelectReservaByClienteOrQuarto"/>
+        /// </summary>
         public IList<reserva> SelectReservaByClienteOrQuarto(cliente cliente, quarto quarto)
         {
             IList<reserva> reservas = new List<reserva>();

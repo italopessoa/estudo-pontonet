@@ -45,14 +45,34 @@ namespace Hotel.Facade
 
         #region TipoQuarto
 
+        /// <summary>
+        /// Método para inserir novo tipo de quarto.
+        /// </summary>
+        /// <param name="novoTipoQuarto">Nova Tipo de Quarto. <see cref="Hotel.Entity.HotelModel.Designer.cs"/> </param>
         void InsertTipoQuarto(tipo_quarto novoTipoQuarto);
 
+        /// <summary>
+        /// Método para remover um tipo de quarto.
+        /// </summary>
+        /// <param name="tipoQuarto">Tipo de quarto a ser removida. <see cref="Hotel.Entity.HotelModel.Designer.cs"/> </param>
         void RemoveTipoQuarto(tipo_quarto tipoQuarto);
 
+        /// <summary>
+        /// Método para alterar os dados de um tipo de quarto.
+        /// </summary>
+        /// <param name="tipoQuarto">Tipo de quarto a ser alterado. <see cref="Hotel.Entity.HotelModel.Designer.cs"/> </param>
         void UpdateTipoQuarto(tipo_quarto tipoQuarto);
 
+        /// <summary>
+        /// Selecionar todos os Tipos de quarto.
+        /// </summary>
+        /// <returns>Lista de Tipos de quarto <see cref="Hotel.Entity.HotelModel.Designer.cs"/> </returns>
         IList<tipo_quarto> SelectTiposQuarto();
 
+        /// <summary>
+        /// Selecionar tipo de quarto pelo Identificador.
+        /// </summary>
+        /// <returns>Tipo de quarto <see cref="Hotel.Entity.HotelModel.Designer.cs"/> </returns>
         tipo_quarto SelectTipoQuartoById(int idTipoQuarto);
 
         #endregion
@@ -96,14 +116,36 @@ namespace Hotel.Facade
 
         #region Reserva
 
+        /// <summary>
+        /// Método para inserir nova reserva.
+        /// </summary>
+        /// <param name="novaReserva">Nova Reserva. <see cref="Hotel.Entity.HotelModel.Designer.cs"/> </param>
         void InsertReserva(reserva novaReserva);
 
+        /// <summary>
+        /// Método para remover uma reserva.
+        /// </summary>
+        /// <param name="reserva">Reserva a ser removida. <see cref="Hotel.Entity.HotelModel.Designer.cs"/> </param>
         void RemoveReserva(reserva reserva);
 
+        /// <summary>
+        /// Método para alterar os dados de uma reserva.
+        /// </summary>
+        /// <param name="reserva">Reserva a ser alterada. <see cref="Hotel.Entity.HotelModel.Designer.cs"/> </param>
         void UpdateReserva(reserva reserva);
 
+        /// <summary>
+        /// Selecionar todas as reservas.
+        /// </summary>
+        /// <returns>Lista de tipo_quarto tipoQuarto <see cref="Hotel.Entity.HotelModel.Designer.cs"/> </returns>
         IList<reserva> SelectReservas();
 
+        /// <summary>
+        /// Selecionar reservas por cliente e/ou quarto
+        /// </summary>
+        /// <param name="cliente">Cliente que fez a rserva. <see cref="Hotel.Entity.HotelModel.Designer.cs"/> </param>
+        /// <param name="quarto">Quarto utilizado na reserva. <see cref="Hotel.Entity.HotelModel.Designer.cs"/></param>
+        /// <returns>Lista de Reservas <see cref="Hotel.Entity.HotelModel.Designer.cs"/> </returns>
         IList<reserva> SelectReservaByClienteOrQuarto(cliente cliente, quarto quarto);
 
         #endregion
