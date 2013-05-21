@@ -10,6 +10,9 @@ namespace Hotel.Data.Implementation
     {
         #region ITipoQuartoData Members
 
+        /// <summary>
+        /// <see cref="Hotel.Data.ITipoQuartoData.InsertTipoQuarto"/>
+        /// </summary>
         public void InsertTipoQuarto(tipo_quarto novoTipoQuarto)
         {
             using (HotelEntities contexto = new HotelEntities())
@@ -20,6 +23,9 @@ namespace Hotel.Data.Implementation
             }
         }
 
+        /// <summary>
+        /// <see cref="Hotel.Data.ITipoQuartoData.RemoveTipoQuarto"/>
+        /// </summary>
         public void RemoveTipoQuarto(tipo_quarto tipoQuarto)
         {
             using (HotelEntities contexto = new HotelEntities())
@@ -29,6 +35,9 @@ namespace Hotel.Data.Implementation
             }
         }
 
+        /// <summary>
+        /// <see cref="Hotel.Data.ITipoQuartoData.UpdateTipoQuarto"/>
+        /// </summary>
         public void UpdateTipoQuarto(tipo_quarto tipoQuarto)
         {
             using (HotelEntities contexto = new HotelEntities())
@@ -43,6 +52,9 @@ namespace Hotel.Data.Implementation
             }
         }
 
+        /// <summary>
+        /// <see cref="Hotel.Data.ITipoQuartoData.SelectTiposQuarto"/>
+        /// </summary>
         public IList<tipo_quarto> SelectTiposQuarto()
         {
             List<tipo_quarto> tiposQuarto = new List<tipo_quarto>();
@@ -58,6 +70,9 @@ namespace Hotel.Data.Implementation
             return tiposQuarto;
         }
 
+        /// <summary>
+        /// <see cref="Hotel.Data.ITipoQuartoData.SelectTipoQuartoById"/>
+        /// </summary>
         public tipo_quarto SelectTipoQuartoById(int idTipoQuarto)
         {
             using (HotelEntities contexto = new HotelEntities())

@@ -80,26 +80,41 @@ namespace Hotel.Facade.Implementation
 
         #region TipoQuarto
 
+        /// <summary>
+        /// <see cref="Hotel.Facade.IHotelFacade.InsertTipoQuarto"/>
+        /// </summary>
         public void InsertTipoQuarto(tipo_quarto novoTipoQuarto)
         {
             this.tipoQuartoBusiness.InsertTipoQuarto(novoTipoQuarto);
         }
 
+        /// <summary>
+        /// <see cref="Hotel.Facade.IHotelFacade.RemoveTipoQuarto"/>
+        /// </summary>
         public void RemoveTipoQuarto(tipo_quarto tipoQuarto)
         {
             this.tipoQuartoBusiness.RemoveTipoQuarto(tipoQuarto);
         }
 
+        /// <summary>
+        /// <see cref="Hotel.Facade.IHotelFacade.UpdateTipoQuarto"/>
+        /// </summary>
         public void UpdateTipoQuarto(tipo_quarto tipoQuarto)
         {
             this.tipoQuartoBusiness.UpdateTipoQuarto(tipoQuarto);
         }
 
+        /// <summary>
+        /// <see cref="Hotel.Facade.IHotelFacade.SelectTiposQuarto"/>
+        /// </summary>
         public IList<tipo_quarto> SelectTiposQuarto()
         {
             return this.tipoQuartoBusiness.SelectTiposQuarto();
         }
 
+        /// <summary>
+        /// <see cref="Hotel.Facade.IHotelFacade.SelectTipoQuartoById"/>
+        /// </summary>
         public tipo_quarto SelectTipoQuartoById(int idTipoQuarto)
         {
             return this.tipoQuartoBusiness.SelectTipoQuartoById(idTipoQuarto);
@@ -153,26 +168,41 @@ namespace Hotel.Facade.Implementation
 
         #region Reserva
 
+        /// <summary>
+        /// <see cref="Hotel.Facade.IHotelFacade.InsertReserva"/>
+        /// </summary>
         public void InsertReserva(reserva novaReserva)
         {
             this.reservaBusiness.InsertReserva(novaReserva);
         }
 
+        /// <summary>
+        /// <see cref="Hotel.Facade.IHotelFacade.RemoveReserva"/>
+        /// </summary>
         public void RemoveReserva(reserva reserva)
         {
             this.reservaBusiness.RemoveReserva(reserva);
         }
 
+        /// <summary>
+        /// <see cref="Hotel.Facade.IHotelFacade.UpdateReserva"/>
+        /// </summary>
         public void UpdateReserva(reserva reserva)
         {
             this.reservaBusiness.UpdateReserva(reserva);
         }
 
+        /// <summary>
+        /// <see cref="Hotel.Facade.IHotelFacade.SelectReservas"/>
+        /// </summary>
         public IList<reserva> SelectReservas()
         {
             return this.reservaBusiness.SelectReservas();
         }
 
+        /// <summary>
+        /// <see cref="Hotel.Facade.IHotelFacade.SelectReservaByClienteOrQuarto"/>
+        /// </summary>
         public IList<reserva> SelectReservaByClienteOrQuarto(cliente cliente, quarto quarto)
         {
             return this.reservaBusiness.SelectReservaByClienteOrQuarto(cliente, quarto);
