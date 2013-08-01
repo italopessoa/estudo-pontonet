@@ -1,0 +1,12 @@
+c:\users\italo.pessoa\documents\visual studio 2012\Projects\ProjetoMDI\ProjetoMDI\obj\Debug\ProjetoMDI.FormFilho1.resources
+c:\users\italo.pessoa\documents\visual studio 2012\Projects\ProjetoMDI\ProjetoMDI\obj\Debug\ProjetoMDI.FormFilho2.resources
+c:\users\italo.pessoa\documents\visual studio 2012\Projects\ProjetoMDI\ProjetoMDI\obj\Debug\ProjetoMDI.FormFilho3.resources
+c:\users\italo.pessoa\documents\visual studio 2012\Projects\ProjetoMDI\ProjetoMDI\obj\Debug\ProjetoMDI.FormPrincipal.resources
+c:\users\italo.pessoa\documents\visual studio 2012\Projects\ProjetoMDI\ProjetoMDI\obj\Debug\ProjetoMDI.Properties.Resources.resources
+c:\users\italo.pessoa\documents\visual studio 2012\Projects\ProjetoMDI\ProjetoMDI\obj\Debug\ProjetoMDI.csproj.GenerateResource.Cache
+c:\users\italo.pessoa\documents\visual studio 2012\Projects\ProjetoMDI\ProjetoMDI\bin\Debug\ProjetoMDI.exe.config
+c:\users\italo.pessoa\documents\visual studio 2012\Projects\ProjetoMDI\ProjetoMDI\bin\Debug\ProjetoMDI.exe
+c:\users\italo.pessoa\documents\visual studio 2012\Projects\ProjetoMDI\ProjetoMDI\bin\Debug\ProjetoMDI.pdb
+c:\users\italo.pessoa\documents\visual studio 2012\Projects\ProjetoMDI\ProjetoMDI\obj\Debug\ProjetoMDI.exe
+c:\users\italo.pessoa\documents\visual studio 2012\Projects\ProjetoMDI\ProjetoMDI\obj\Debug\ProjetoMDI.pdb
+c:\users\italo.pessoa\documents\visual studio 2012\Projects\ProjetoMDI\ProjetoMDI\obj\Debug\ProjetoMDI.csprojResolveAssemblyReference.cache
